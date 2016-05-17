@@ -2,6 +2,9 @@ $yellow: #f8d545;
 $purple: #913abd;
 $pink: #e8128c;
 $blue: #64d7ae;
+$white: #fafdfa;
+
+$section-padding: 36px;
 
 html,
 body {
@@ -32,8 +35,8 @@ body {
     }
 }
 
-.projects {
-    padding: 46px;
+.projects-section {
+    padding: $section-padding;
     background-color: $purple;
     color: $yellow;
     .projects-title {
@@ -43,19 +46,68 @@ body {
         color: $blue;
     }
     .project-title {
+        letter-spacing: 1px;
     }
 }
 
-.skills {
-    padding: 46px;
+.skills-section {
+    padding: $section-padding;
     background-color: $pink;
     .skills-title {
-        color: $yellow;
+        color: $blue;
         font-size: 32px;
         font-weight: 200;
         letter-spacing: 1.5px;
     }
     .skillset-title {
+        color: $yellow;
+        letter-spacing: 1.5px;
+        font-weight: 400px;
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+    .skill-title {
+        font-weight: 200;
+        letter-spacing: 1.5px;
+        color: $yellow;
+    }
+}
+
+.education-section {
+    padding: $section-padding;
+    background-color: $blue;
+    .education-title {
+        font-size: 32px;
+        font-weight: 200;
+        color: $purple;
+    }
+    .school-title {
+        color: $pink;
+    }
+}
+
+.work-section {
+    padding: $section-padding;
+    background-color: $yellow;
+    .work-title {
+        font-size: 32px;
+        font-weight: 200;
+        color: $purple;
+    }
+    .job-title {
+        color: $pink;
+    }
+}
+
+.contact-section {
+    padding: $section-padding;
+    background-color: $purple;
+    .contact-title {
+        font-size: 32px;
+        font-weight: 200;
+        color: $blue;
+    }
+    .contact {
         color: $yellow;
     }
 }
