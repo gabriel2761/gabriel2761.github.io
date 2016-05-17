@@ -1,8 +1,61 @@
+$yellow: #f8d545;
+$purple: #913abd;
+$pink: #e8128c;
+$blue: #64d7ae;
+
 html,
 body {
+    margin: 0;
+    padding: 0;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    h2 {
+        margin: 0;
+    }
 }
 
 .intro {
+    margin: 0;
+    padding: 46px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $yellow;
+    color: $purple;
+    .intro-name {
+        margin: 0;
+        font-weight: 100;
+        font-size: 36px;
+        letter-spacing: 1.5px;
+    }
+    .intro-title {
+    }
+}
 
+.projects {
+    padding: 46px;
+    background-color: $purple;
+    color: $yellow;
+    .projects-title {
+        font-size: 32px;
+        font-weight: 200;
+        letter-spacing: 1.5px;
+        color: $blue;
+    }
+    .project-title {
+    }
+}
+
+.skills {
+    padding: 46px;
+    background-color: $pink;
+    .skills-title {
+        color: $yellow;
+        font-size: 32px;
+        font-weight: 200;
+        letter-spacing: 1.5px;
+    }
+    .skillset-title {
+        color: $yellow;
+    }
 }
