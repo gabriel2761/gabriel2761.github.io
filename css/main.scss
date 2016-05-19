@@ -4,7 +4,7 @@ $pink: #e8128c;
 $blue: #64d7ae;
 $white: #fafdfa;
 
-$section-padding: 36px;
+$section-padding: 28px;
 
 html,
 body {
@@ -27,7 +27,6 @@ body {
         margin: 0;
         font-weight: 100;
         font-size: 36px;
-        letter-spacing: 1.5px;
         color: $purple;
     }
     .intro-title {
@@ -40,15 +39,16 @@ body {
         margin-bottom: 22px;
         font-size: 32px;
         font-weight: 200;
-        letter-spacing: 1.5px;
         color: $purple;
+    }
+    .project {
+        width: 100%;
     }
     .project-img {
         width: 100%;
     }
     .project-title {
         margin-bottom: 12px;
-        letter-spacing: 1px;
     }
 }
 
@@ -58,7 +58,6 @@ body {
         color: $purple;
         font-size: 32px;
         font-weight: 200;
-        letter-spacing: 1.5px;
     }
     .skillset-title {
         letter-spacing: 1.5px;
@@ -68,7 +67,6 @@ body {
     }
     .skill-title {
         font-weight: 200;
-        letter-spacing: 1.5px;
     }
 }
 
@@ -105,9 +103,16 @@ body {
     }
 }
 
-@media (min-width: 375px) {
-    .project {
-        width: 50%;
+@media (min-width: 435px) {
+    .projects-section {
+        .project {
+            width: 48%;
+        }
+        .projects-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
     }
 }
 
