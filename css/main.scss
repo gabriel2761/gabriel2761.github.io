@@ -23,13 +23,12 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: $yellow;
-    color: $purple;
     .intro-name {
         margin: 0;
         font-weight: 100;
         font-size: 36px;
         letter-spacing: 1.5px;
+        color: $purple;
     }
     .intro-title {
     }
@@ -37,30 +36,31 @@ body {
 
 .projects-section {
     padding: $section-padding;
-    background-color: $purple;
-    color: $yellow;
     .projects-title {
+        margin-bottom: 22px;
         font-size: 32px;
         font-weight: 200;
         letter-spacing: 1.5px;
-        color: $blue;
+        color: $purple;
+    }
+    .project-img {
+        width: 100%;
     }
     .project-title {
+        margin-bottom: 12px;
         letter-spacing: 1px;
     }
 }
 
 .skills-section {
     padding: $section-padding;
-    background-color: $pink;
     .skills-title {
-        color: $blue;
+        color: $purple;
         font-size: 32px;
         font-weight: 200;
         letter-spacing: 1.5px;
     }
     .skillset-title {
-        color: $yellow;
         letter-spacing: 1.5px;
         font-weight: 400px;
         font-size: 22px;
@@ -69,45 +69,38 @@ body {
     .skill-title {
         font-weight: 200;
         letter-spacing: 1.5px;
-        color: $yellow;
     }
 }
 
 .education-section {
     padding: $section-padding;
-    background-color: $blue;
     .education-title {
         font-size: 32px;
         font-weight: 200;
         color: $purple;
     }
     .school-title {
-        color: $pink;
     }
 }
 
 .work-section {
     padding: $section-padding;
-    background-color: $yellow;
     .work-title {
         font-size: 32px;
         font-weight: 200;
         color: $purple;
     }
     .job-title {
-        color: $pink;
     }
 }
 
 .contact-section {
     padding: $section-padding;
-    background-color: $purple;
     .contact-title {
         font-size: 32px;
         font-weight: 200;
-        color: $blue;
+        color: $purple;
     }
     .contact {
-        color: $yellow;
     }
 }
