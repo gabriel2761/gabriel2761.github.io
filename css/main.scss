@@ -3,7 +3,6 @@ $purple: #913abd;
 $pink: #e8128c;
 $blue: #64d7ae;
 $white: #fafdfa;
-
 $section-padding: 28px;
 
 html,
@@ -25,7 +24,7 @@ body {
     justify-content: center;
     .intro-name {
         margin: 0;
-        font-weight: 100;
+        font-weight: 200;
         font-size: 36px;
         color: $purple;
     }
@@ -118,12 +117,39 @@ body {
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-
+    .projects-section {
+        .project {
+            width: 32%;
+        }
+        .project:nth-child(3n+2) {
+            margin: 0 1.5%;
+        }
+        .projects-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+    }
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-
+    .projects-section {
+        .project {
+            width: 24%;
+        }
+        .project:nth-child(n) {
+            margin: 0;
+            margin-right: 1%;
+        }
+        .project:nth-child(n+4) {
+            margin-right: 0;
+        }
+        .projects-content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
 }
 
 /* Large devices (large desktops, 1200px and up) */
