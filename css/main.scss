@@ -107,6 +107,9 @@ body {
 }
 
 @media (min-width: 435px) {
+    .intro {
+        align-items: flex-start;
+    }
     .projects-section {
         .project {
             width: 48%;
