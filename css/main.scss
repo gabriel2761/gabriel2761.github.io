@@ -21,9 +21,9 @@ body {
 
 .intro {
     margin: 0;
-    padding: 46px;
     display: flex;
     flex-direction: column;
+    padding: $section-padding;
     align-items: center;
     justify-content: center;
     .intro-name {
