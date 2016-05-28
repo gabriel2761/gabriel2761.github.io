@@ -146,6 +146,9 @@ body {
             justify-content: flex-start;
         }
     }
+    .skill-content .skillset {
+        width: 32%;
+    }
 }
 
 /* Medium devices (desktops, 992px and up) */
@@ -165,6 +168,9 @@ body {
             display: flex;
             flex-wrap: wrap;
         }
+    }
+    .skill-content .skillset {
+        width: 24%;
     }
 }
 
