@@ -120,6 +120,15 @@ body {
             justify-content: space-between;
         }
     }
+    .skill-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        text-align: center;
+        .skillset {
+            width: 48%;
+        }
+    }
 }
 
 /* Small devices (tablets, 768px and up) */
