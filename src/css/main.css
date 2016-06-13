@@ -1,0 +1,124 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  html h2,
+  body h2 {
+    margin: 0; }
+  html .container,
+  body .container {
+    margin: 0 auto;
+    max-width: 1170px; }
+
+.intro {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  align-items: center;
+  justify-content: center; }
+  .intro .intro-name {
+    margin: 0;
+    font-weight: 200;
+    font-size: 36px;
+    color: #913abd; }
+
+.projects-section {
+  padding: 28px; }
+  .projects-section .projects-title {
+    margin-bottom: 22px;
+    font-size: 32px;
+    font-weight: 200;
+    color: #913abd; }
+  .projects-section .project {
+    width: 100%; }
+  .projects-section .project-img {
+    width: 100%; }
+  .projects-section .project-title {
+    margin-bottom: 12px; }
+
+.skills-section {
+  padding: 28px; }
+  .skills-section .skills-title {
+    color: #913abd;
+    font-size: 32px;
+    font-weight: 200; }
+  .skills-section .skillset-title {
+    letter-spacing: 1.5px;
+    font-weight: 400px;
+    font-size: 22px;
+    margin-bottom: 12px; }
+  .skills-section .skill-title {
+    font-weight: 200; }
+
+.education-section {
+  padding: 28px; }
+  .education-section .education-title {
+    font-size: 32px;
+    font-weight: 200;
+    color: #913abd; }
+
+.work-section {
+  padding: 28px; }
+  .work-section .work-title {
+    font-size: 32px;
+    font-weight: 200;
+    color: #913abd; }
+
+.contact-section {
+  padding: 28px; }
+  .contact-section .contact-title {
+    font-size: 32px;
+    font-weight: 200;
+    color: #913abd; }
+
+@media (min-width: 435px) {
+  .intro {
+    align-items: flex-start; }
+
+  .projects-section .project {
+    width: 48%; }
+  .projects-section .projects-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+
+  .skill-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center; }
+    .skill-content .skillset {
+      width: 48%; } }
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .projects-section .project {
+    width: 32%; }
+  .projects-section .project:nth-child(3n+2) {
+    margin: 0 2%; }
+  .projects-section .projects-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; }
+
+  .skill-content .skillset {
+    width: 32%; } }
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .projects-section .project {
+    width: 24%; }
+  .projects-section .project:nth-child(n) {
+    margin: 0;
+    margin-right: 1.3333333%; }
+  .projects-section .project:nth-child(n+4) {
+    margin-right: 0; }
+  .projects-section .projects-content {
+    display: flex;
+    flex-wrap: wrap; }
+
+  .skill-content .skillset {
+    width: 24%; } }
+/* Large devices (large desktops, 1200px and up) */
+
+/*# sourceMappingURL=main.css.map */
