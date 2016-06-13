@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/gabriel2761/gabriel2761.github.io/issues"
   },
-  "homepage": "https://github.com/gabriel2761/gabriel2761.github.io#readme"
+  "homepage": "https://github.com/gabriel2761/gabriel2761.github.io#readme",
+  "devDependencies": {
+    "gulp-htmlmin": "^2.0.0"
+  }
 }
