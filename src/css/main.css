@@ -113,12 +113,13 @@ body {
     margin-right: 1.3333333%; }
   .projects-section .project:nth-child(n+4) {
     margin-right: 0; }
+  .projects-section .project:nth-child(n+5) {
+    margin-right: 1.3333333%; }
   .projects-section .projects-content {
     display: flex;
     flex-wrap: wrap; }
 
   .skill-content .skillset {
     width: 24%; } }
-/* Large devices (large desktops, 1200px and up) */
 
 /*# sourceMappingURL=main.css.map */
