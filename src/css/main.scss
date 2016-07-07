@@ -54,12 +54,13 @@ body {
             cursor: pointer;
             box-shadow: 0 4px 18px #888888;
         }
-    }
-    .project-img {
-        width: 100%;
-    }
-    .project-title {
-        margin-bottom: 12px;
+        .project-img {
+            width: 100%;
+        }
+        .project-title,
+        .project-description {
+            margin: 16px 12px;
+        }
     }
 }
 
@@ -114,7 +115,7 @@ body {
     }
 }
 
-@media (min-width: 435px) {
+@media (min-width: 525px) {
     .intro {
         align-items: flex-start;
     }
@@ -143,7 +144,7 @@ body {
 @media (min-width: 768px) {
     .projects-section {
         .project {
-            width: 24%;
+            width: 32%;
         }
     }
     .skill-content .skillset {
@@ -157,6 +158,7 @@ body {
         .project {
             width: 24%;
         }
+
     }
     .skill-content .skillset {
         width: 24%;

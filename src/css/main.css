@@ -39,10 +39,11 @@ body {
     .projects-section .project:hover {
       cursor: pointer;
       box-shadow: 0 4px 18px #888888; }
-  .projects-section .project-img {
-    width: 100%; }
-  .projects-section .project-title {
-    margin-bottom: 12px; }
+    .projects-section .project .project-img {
+      width: 100%; }
+    .projects-section .project .project-title,
+    .projects-section .project .project-description {
+      margin: 16px 12px; }
 
 .skills-section {
   padding: 28px; }
@@ -79,7 +80,7 @@ body {
     font-weight: 200;
     color: #913abd; }
 
-@media (min-width: 435px) {
+@media (min-width: 525px) {
   .intro {
     align-items: flex-start; }
 
@@ -100,7 +101,7 @@ body {
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .projects-section .project {
-    width: 24%; }
+    width: 32%; }
 
   .skill-content .skillset {
     width: 32%; } }
