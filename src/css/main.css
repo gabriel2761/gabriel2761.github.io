@@ -36,6 +36,9 @@ body {
     width: 100%;
     margin: 9px 0;
     background-color: #fff; }
+    .projects-section .project:hover {
+      cursor: pointer;
+      box-shadow: 0 4px 18px #888888; }
   .projects-section .project-img {
     width: 100%; }
   .projects-section .project-title {
