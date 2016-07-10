@@ -1,3 +1,5 @@
+$primary-text: #212121;
+$secondary-text: #727272;
 $yellow: #f8d545;
 $purple: #913abd;
 $pink: #e8128c;
@@ -12,6 +14,7 @@ body {
     padding: 0;
     background-color: $bg-color;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: $secondary-text;
     h2 {
         margin: 0;
     }
