@@ -18,7 +18,7 @@ body {
     h2 {
         margin: 0;
     }
-    .container {
+    .section-container {
         margin: 0 auto;
         max-width: 1170px;
     }
@@ -26,12 +26,8 @@ body {
 
 .intro {
     margin: 0;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    padding: $section-padding;
     background-color: $purple;
-    align-items: center;
+    padding: $section-padding;
     .intro-name {
         margin: 0;
         font-weight: 200;
@@ -41,8 +37,10 @@ body {
     .intro-title {
         color: #bbb;
     }
+    .intro-hero-img {
+        width: 100%;
+    }
     .intro-description {
-        text-align: center;
         color: #eee;
     }
 }
@@ -125,12 +123,22 @@ body {
     }
 }
 
+@media (min-width: 525px) {
+    .grid-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .intro {
+        .intro-description {
+            text-align: center;
+        }
+    }
+}
+
 
 /* Small Screens */
 @media (min-width: 525px) and (max-width: 767px) {
     .grid-container {
-        display: flex;
-        flex-wrap: wrap;
         justify-content: space-between;
         .sm-col-6 {
             width: 48%;
@@ -139,30 +147,13 @@ body {
 }
 
 /* Medium Screens */
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) {
     .grid-container {
-        display: flex;
-        flex-wrap: wrap;
         .md-col-4 {
             width: 32%;
             margin-right: 2%;
         }
         .md-col-4:nth-child(3n) {
-            margin-right: 0;
-        }
-    }
-}
-
-/* Large Screens */
-@media (min-width: 992px) {
-    .grid-container {
-        display: flex;
-        flex-wrap: wrap;
-        .md-col-3 {
-            width: 24%;
-            margin-right: 1.33333%;
-        }
-        .md-col-3:nth-child(4n) {
             margin-right: 0;
         }
     }
