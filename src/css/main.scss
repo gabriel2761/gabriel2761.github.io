@@ -26,18 +26,24 @@ body {
 
 .intro {
     margin: 0;
+    height: 500px;
     display: flex;
     flex-direction: column;
     padding: $section-padding;
+    background-color: $purple;
     align-items: center;
-    justify-content: center;
     .intro-name {
         margin: 0;
         font-weight: 200;
         font-size: 36px;
-        color: $purple;
+        color: #eee;
     }
     .intro-title {
+        color: #bbb;
+    }
+    .intro-description {
+        text-align: center;
+        color: #eee;
     }
 }
 
