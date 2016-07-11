@@ -118,52 +118,45 @@ body {
     }
 }
 
-@media (min-width: 525px) {
-    .intro {
-        align-items: flex-start;
-    }
-    .projects-section {
-        .project {
-            width: 48%;
-        }
-        .projects-content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-    }
-    .skill-content {
+
+/* Small Screens */
+@media (min-width: 525px) and (max-width: 767px) {
+    .grid-container {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        text-align: center;
-        .skillset {
+        .sm-col-6 {
             width: 48%;
         }
     }
 }
 
-/* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-    .projects-section {
-        .project {
+/* Medium Screens */
+@media (min-width: 768px) and (max-width: 991px) {
+    .grid-container {
+        display: flex;
+        flex-wrap: wrap;
+        .md-col-4 {
             width: 32%;
+            margin-right: 2%;
         }
-    }
-    .skill-content .skillset {
-        width: 32%;
+        .md-col-4:nth-child(3n) {
+            margin-right: 0;
+        }
     }
 }
 
-/* Medium devices (desktops, 992px and up) */
+/* Large Screens */
 @media (min-width: 992px) {
-    .projects-section {
-        .project {
+    .grid-container {
+        display: flex;
+        flex-wrap: wrap;
+        .md-col-3 {
             width: 24%;
+            margin-right: 1.33333%;
         }
-
-    }
-    .skill-content .skillset {
-        width: 24%;
+        .md-col-3:nth-child(4n) {
+            margin-right: 0;
+        }
     }
 }
