@@ -32,20 +32,28 @@ body {
     margin: 0;
     background-color: $purple;
     padding: $section-padding;
-    .intro-name {
-        margin: 0;
-        font-weight: 200;
-        font-size: 36px;
-        color: #eee;
-    }
-    .intro-title {
-        color: #bbb;
+    .intro-headings-container {
+        .intro-name {
+            margin: 0;
+            font-weight: 200;
+            font-size: 36px;
+            color: #eee;
+        }
+        .intro-title {
+            margin: 6px;
+            color: #bbb;
+        }
     }
     .intro-hero-img {
+        margin: 16px 0;
         width: 100%;
     }
     .intro-description {
         color: #eee;
+        .intro-description-line {
+            font-size: 16px;
+            margin: 12px 0;
+        }
     }
 }
 
@@ -129,11 +137,28 @@ body {
 
 @media (min-width: 525px) {
     .intro {
+        .intro-headings-container {
+            margin: 36px 0;
+            .intro-name {
+                font-size: 56px;
+            }
+            .intro-title {
+                font-size: 22px;
+                margin: 14px 8px;
+            }
+        }
         .intro-description {
-            text-align: center;
+            margin: 36px 0;
+            color: #eee;
+            .intro-description-line {
+                font-size: 22px;
+                margin: 12px 0;
+            }
         }
     }
 }
+
+
 
 
 /* Small Screens */
@@ -155,6 +180,11 @@ body {
         }
         .md-col-4:nth-child(3n) {
             margin-right: 0;
+        }
+    }
+    .intro {
+        .intro-description {
+            margin: 56px 0;
         }
     }
 }
