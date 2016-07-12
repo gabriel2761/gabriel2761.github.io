@@ -22,6 +22,10 @@ body {
         margin: 0 auto;
         max-width: 1170px;
     }
+    .grid-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 .intro {
@@ -47,6 +51,7 @@ body {
 
 .projects-section {
     padding: $section-padding;
+
     .projects-title {
         margin-bottom: 22px;
         font-size: 32px;
@@ -124,10 +129,6 @@ body {
 }
 
 @media (min-width: 525px) {
-    .grid-container {
-        display: flex;
-        flex-wrap: wrap;
-    }
     .intro {
         .intro-description {
             text-align: center;
