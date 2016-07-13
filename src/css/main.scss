@@ -42,14 +42,14 @@ body {
 
 .hero-section {
     background-color: #fefefe;
-    .intro-title {
+    .hero-title {
         margin: 0;
     }
-    .intro-hero-img {
+    .hero-img {
         margin: 16px 0;
         width: 100%;
     }
-    .intro-description .intro-description-line {
+    .hero-description .hero-description-line {
         font-size: 16px;
         margin: 12px 0;
     }
@@ -134,17 +134,17 @@ body {
 @media (min-width: 525px) {
     .hero-section {
         background-color: #fefefe;
-        .intro-title {
+        .hero-title {
             font-size: 22px;
             margin: 0;
         }
-        .intro-hero-img {
+        .hero-img {
             margin: 16px 0;
             width: 100%;
         }
-        .intro-description {
+        .hero-description {
             margin: 36px 0;
-            .intro-description-line {
+            .hero-description-line {
                 font-size: 22px;
                 margin: 12px 0;
             }
@@ -180,10 +180,10 @@ body {
         }
     }
     .hero-section {
-        .intro-title {
+        .hero-title {
             margin-top: 56px;
         }
-        .intro-description {
+        .hero-description {
             margin-bottom: 56px;
         }
     }
