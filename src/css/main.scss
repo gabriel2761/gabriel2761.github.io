@@ -32,13 +32,11 @@ body {
 .intro {
     margin: 0;
     background-color: $purple;
-    .intro-headings-container {
-        .intro-name {
-            margin: 0;
-            font-weight: 200;
-            font-size: 36px;
-            color: #eee;
-        }
+    .intro-headings-container .intro-name {
+        margin: 0;
+        font-weight: 200;
+        font-size: 36px;
+        color: #eee;
     }
 }
 
@@ -51,11 +49,9 @@ body {
         margin: 16px 0;
         width: 100%;
     }
-    .intro-description {
-        .intro-description-line {
-            font-size: 16px;
-            margin: 12px 0;
-        }
+    .intro-description .intro-description-line {
+        font-size: 16px;
+        margin: 12px 0;
     }
 }
 
@@ -154,20 +150,13 @@ body {
             }
         }
     }
-    .intro {
-        .intro-headings-container {
-            margin: 36px 0;
-            .intro-name {
-                font-size: 56px;
-            }
-
+    .intro .intro-headings-container {
+        margin: 36px 0;
+        .intro-name {
+            font-size: 56px;
         }
-
     }
 }
-
-
-
 
 /* Small Screens */
 @media (min-width: 525px) and (max-width: 767px) {
