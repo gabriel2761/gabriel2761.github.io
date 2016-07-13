@@ -190,9 +190,12 @@ body {
             margin-right: 0;
         }
     }
-    .intro {
+    .hero-section {
+        .intro-title {
+            margin-top: 56px;
+        }
         .intro-description {
-            margin: 56px 0;
+            margin-bottom: 56px;
         }
     }
 }
