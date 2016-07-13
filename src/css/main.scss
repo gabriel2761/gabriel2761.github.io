@@ -1,12 +1,9 @@
 $primary-text: #212121;
 $secondary-text: #727272;
-$yellow: #f8d545;
 $purple: #913abd;
-$pink: #e8128c;
-$blue: #64d7ae;
-$white: #fafdfa;
 $bg-color: #e9eaea;
-$section-padding: 28px;
+$section-padding-small: 28px;
+$section-padding-md: 46px 28px;
 
 html,
 body {
@@ -20,7 +17,7 @@ body {
     }
     .section-container {
         margin: 0 auto;
-        padding: $section-padding;
+        padding: $section-padding-small;
         max-width: 1170px;
     }
     .grid-container {
@@ -31,7 +28,7 @@ body {
 
 .intro {
     background-color: $purple;
-    padding: $section-padding;
+    padding: $section-padding-small;
     .intro-name {
         margin: 0;
         font-weight: 200;
@@ -99,7 +96,6 @@ body {
 }
 
 .education-section {
-    padding: $section-padding;
     .education-title {
         font-size: 32px;
         font-weight: 200;
@@ -110,7 +106,6 @@ body {
 }
 
 .work-section {
-    padding: $section-padding;
     .work-title {
         font-size: 32px;
         font-weight: 200;
@@ -121,7 +116,6 @@ body {
 }
 
 .contact-section {
-    padding: $section-padding;
     .contact-title {
         font-size: 32px;
         font-weight: 200;
@@ -131,9 +125,15 @@ body {
     }
 }
 
+/* Small Screens and up */
 @media (min-width: 525px) {
+    body {
+        .section-container {
+            padding: $section-padding-md;
+        }
+    }
     .intro {
-        padding: 66px 28px;
+        padding: 60px 36px;
         .intro-name {
             font-size: 56px;
         }
@@ -158,17 +158,7 @@ body {
     }
 }
 
-/* Small Screens */
-@media (min-width: 525px) and (max-width: 767px) {
-    .grid-container {
-        justify-content: space-between;
-        .sm-col-6 {
-            width: 48%;
-        }
-    }
-}
-
-/* Medium Screens */
+/* Medium Screens and up */
 @media (min-width: 768px) {
     .grid-container {
         .md-col-4 {
@@ -181,10 +171,20 @@ body {
     }
     .hero-section {
         .hero-title {
-            margin-top: 56px;
+            margin-top: 46px;
         }
         .hero-description {
             margin-bottom: 56px;
+        }
+    }
+}
+
+/* Just Small Screens */
+@media (min-width: 525px) and (max-width: 767px) {
+    .grid-container {
+        justify-content: space-between;
+        .sm-col-6 {
+            width: 48%;
         }
     }
 }
