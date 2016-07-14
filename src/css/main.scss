@@ -63,8 +63,9 @@ body {
         width: 100%;
         margin: 9px 0;
         background-color: #fff;
+        text-decoration: none;
+        color: $secondary-text;
         &:hover {
-            cursor: pointer;
             box-shadow: 0 4px 18px #888888;
         }
         .project-img {
