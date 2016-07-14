@@ -1,5 +1,6 @@
 $primary-text: #212121;
 $secondary-text: #727272;
+$accent-color: #607d8b;
 $purple: #913abd;
 $bg-color: #e9eaea;
 $section-padding-small: 28px;
@@ -14,6 +15,13 @@ body {
     color: $secondary-text;
     h2 {
         margin: 0;
+    }
+    a {
+        color: $accent-color;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
     }
     .section-container {
         margin: 0 auto;
@@ -102,7 +110,13 @@ body {
         font-weight: 200;
         color: $purple;
     }
-    .school-title {
+    .school {
+        padding: 18px;
+        background-color: #fff;
+        margin: 12px 0;
+        .school-title {
+            margin: 4px 0 12px;
+        }
     }
 }
 
