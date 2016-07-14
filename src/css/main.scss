@@ -139,12 +139,9 @@ body {
             margin: 16px 0;
             width: 100%;
         }
-        .hero-description {
-            margin: 36px 0;
-            .hero-description-line {
-                font-size: 22px;
-                margin: 12px 0;
-            }
+        .hero-description .hero-description-line {
+            font-size: 22px;
+            margin: 12px 0;
         }
     }
 }
@@ -158,14 +155,6 @@ body {
         }
         .md-col-4:nth-child(3n) {
             margin-right: 0;
-        }
-    }
-    .hero-section {
-        .hero-title {
-            margin-top: 46px;
-        }
-        .hero-description {
-            margin-bottom: 56px;
         }
     }
 }
