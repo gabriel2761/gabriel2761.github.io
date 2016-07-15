@@ -3,9 +3,7 @@ var htmlmin = require('gulp-htmlmin');
 var inlinesource = require('gulp-inline-source');
 var imagemin = require('gulp-imagemin');
 
-gulp.task('default', function() {
-    console.log('test');
-});
+gulp.task('default', ['minify', 'imagemin']);
 
 gulp.task('minify', function() {
     return gulp.src('src/index.html')
