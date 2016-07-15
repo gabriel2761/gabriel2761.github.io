@@ -3,7 +3,7 @@ $secondary-text: #727272;
 $accent-color: #607d8b;
 $purple: #913abd;
 $bg-color: #e9eaea;
-$section-padding-small: 28px;
+$section-padding-small: 18px;
 $section-padding-md: 46px 28px;
 
 html,
@@ -111,11 +111,24 @@ body {
         color: $purple;
     }
     .school {
-        padding: 18px;
+        display: flex;
+        justify-content: space-between;
+        padding: 12px;
         background-color: #fff;
         margin: 12px 0;
-        .school-title {
-            margin: 4px 0 12px;
+        .school-logo {
+            align-self: flex-start;
+        }
+        .school-info {
+            width: 80%;
+            .school-title {
+                margin: 4px 0 12px;
+            }
+            .school-date {
+                margin-top: 12px;
+                margin-bottom: 0;
+                color: #aaa;
+            }
         }
     }
 }
