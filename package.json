@@ -18,6 +18,7 @@
   "homepage": "https://github.com/gabriel2761/gabriel2761.github.io#readme",
   "devDependencies": {
     "gulp-htmlmin": "^2.0.0",
+    "gulp-imagemin": "^3.0.1",
     "gulp-inline-source": "^2.1.0"
   }
 }
