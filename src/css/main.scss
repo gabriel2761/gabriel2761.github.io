@@ -17,11 +17,7 @@ body {
         margin: 0;
     }
     a {
-        color: $accent-color;
-        text-decoration: none;
-        &:hover {
-            text-decoration: underline;
-        }
+
     }
     .section-container {
         margin: 0 auto;
@@ -125,6 +121,13 @@ body {
             .school-title {
                 margin: 4px 0 12px;
             }
+            .school-link {
+                color: $accent-color;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
             .school-date {
                 margin-top: 12px;
                 margin-bottom: 0;
@@ -135,12 +138,16 @@ body {
 }
 
 .contact-section {
+    background-color: #727272;
     .contact-title {
         font-size: 32px;
         font-weight: 200;
-        color: $purple;
+        color: #eee;
     }
     .contact {
+        margin: 8px 0;
+        color: #fff;
+        display: block;
     }
 }
 
