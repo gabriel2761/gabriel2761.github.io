@@ -104,7 +104,6 @@ body {
 
 .education-section {
     .school {
-        max-width: 700px;
         display: flex;
         justify-content: space-between;
         padding: 12px;
@@ -193,6 +192,16 @@ body {
             }
         }
     }
+    .education-section {
+        .school {
+            .school-info {
+                padding: 12px;
+                .school-title {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
 }
 
 /* Medium Screens and up */
@@ -220,6 +229,16 @@ body {
             .skillset-title {
             }
             .skill-title {
+            }
+        }
+    }
+    .education-section {
+        .school {
+            padding: 22px;
+            .school-info {
+                .school-title {
+                    font-size: 22px;
+                }
             }
         }
     }
