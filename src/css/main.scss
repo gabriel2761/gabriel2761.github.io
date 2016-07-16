@@ -84,6 +84,9 @@ body {
 
 .skills-section {
     background-color: #fff;
+    .skills-content {
+        text-align: center;
+    }
     .skills-title {
         color: $purple;
         font-size: 32px;
@@ -179,6 +182,22 @@ body {
             margin: 12px 0;
         }
     }
+    .skills-section {
+        .skills-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .skillset {
+            width: 50%;
+            .skills-title {
+            }
+            .skillset-title {
+            }
+            .skill-title {
+            }
+        }
+    }
 }
 
 /* Medium Screens and up */
@@ -190,6 +209,23 @@ body {
         }
         .md-col-4:nth-child(3n) {
             margin-right: 0;
+        }
+    }
+    .skills-section {
+        .skills-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .skillset {
+            width: 33.333%;
+            text-align: center;
+            .skills-title {
+            }
+            .skillset-title {
+            }
+            .skill-title {
+            }
         }
     }
 }
