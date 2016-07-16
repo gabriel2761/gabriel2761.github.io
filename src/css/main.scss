@@ -28,6 +28,12 @@ body {
         display: flex;
         flex-wrap: wrap;
     }
+    .section-title {
+        margin-bottom: 12px;
+        font-size: 32px;
+        font-weight: 200;
+        color: $purple;
+    }
 }
 
 .intro {
@@ -57,12 +63,6 @@ body {
 }
 
 .projects-section {
-    .projects-title {
-        margin-bottom: 22px;
-        font-size: 32px;
-        font-weight: 200;
-        color: $purple;
-    }
     .project {
         width: 100%;
         margin: 9px 0;
@@ -87,11 +87,6 @@ body {
     .skills-content {
         text-align: center;
     }
-    .skills-title {
-        color: $purple;
-        font-size: 32px;
-        font-weight: 200;
-    }
     .skill-img {
         border-radius: 50%;
         width: 200px;
@@ -108,11 +103,6 @@ body {
 }
 
 .education-section {
-    .education-title {
-        font-size: 32px;
-        font-weight: 200;
-        color: $purple;
-    }
     .school {
         max-width: 700px;
         display: flex;
@@ -147,8 +137,6 @@ body {
 .contact-section {
     background-color: #727272;
     .contact-title {
-        font-size: 32px;
-        font-weight: 200;
         color: #eee;
     }
     .contact {
@@ -163,6 +151,9 @@ body {
     body {
         .section-container {
             padding: $section-padding-md;
+        }
+        .section-title {
+            margin-bottom: 26px;
         }
     }
     .intro {
