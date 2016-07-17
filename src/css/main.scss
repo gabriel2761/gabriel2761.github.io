@@ -88,12 +88,18 @@ body {
 
 .skills-section {
     background-color: #fff;
+
+    .skillset {
+        width: 48%;
+        max-width: 230px;
+        margin: 0 auto;
+    }
     .skills-content {
         text-align: center;
     }
     .skill-img {
         border-radius: 50%;
-        width: 200px;
+        width: 100%;
         margin-top: 32px;
     }
     .skillset-title {
@@ -188,7 +194,8 @@ body {
             justify-content: space-between;
         }
         .skillset {
-            width: 50%;
+            margin: 0;
+            width: 38%;
             .skills-title {
             }
             .skillset-title {
@@ -227,7 +234,7 @@ body {
             justify-content: space-between;
         }
         .skillset {
-            width: 33.333%;
+            width: 28%;
             text-align: center;
         }
     }
