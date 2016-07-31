@@ -5,12 +5,13 @@ body {
   color: #666; }
   html .hidden,
   body .hidden {
-    display: none; }
+    display: none;
+    visibility: hidden; }
   html .fa-circle-o-notch,
   body .fa-circle-o-notch {
-    position: absolute;
-    top: 290px;
-    left: 50%;
+    display: block;
+    margin: 20vh auto;
+    text-align: center;
     font-size: 36px;
     color: #888; }
   html .underline-red,
@@ -45,6 +46,33 @@ body {
   body .date-heading * {
     margin: 0;
     margin-top: 16px; }
+
+#tutorial-container {
+  padding: 24px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  right: 0;
+  left: 0;
+  margin: 14vh auto;
+  width: 60vw;
+  height: 70vh;
+  background-color: #fff;
+  box-shadow: 0 4px 18px #555;
+  z-index: 100;
+  min-width: 322px;
+  max-width: 800px; }
+  #tutorial-container .tutorial-heading {
+    margin: 0; }
+  #tutorial-container .instruction {
+    font-size: 17px; }
+  #tutorial-container #close-button {
+    font-size: 24px;
+    margin: auto 0 0 auto;
+    color: #ff8282; }
+    #tutorial-container #close-button:hover {
+      color: #aa3333;
+      cursor: pointer; }
 
 .navigation {
   width: 100%;
@@ -121,12 +149,13 @@ body {
     display: none; }
 
 .profile-item .fa-trash {
+  margin: 0;
   color: #bbb;
-  margin-top: 34px;
   font-size: 22px; }
 
 .profile-item .food-action {
-  display: block; }
+  display: flex;
+  align-items: center; }
 
 .profile-item:hover {
   background-color: #fff;
@@ -139,14 +168,8 @@ body {
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .fa-circle-o-notch {
-    left: 23% !important; }
   .navigation {
     display: none; }
-  .profile-item .fa-trash {
-    visibility: hidden; }
-  .profile-item:hover .fa-trash {
-    visibility: visible; }
   .main-container {
     padding-top: 20px; }
     .main-container .foods {
@@ -154,7 +177,8 @@ body {
       display: block; }
     .main-container .profile {
       margin-left: 4px;
-      display: block; }
+      display: block;
+      visibility: visible; }
     .main-container .profile-foods {
       overflow-y: scroll;
       height: 70vh; }
@@ -166,8 +190,6 @@ body {
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  .fa-circle-o-notch {
-    left: 30% !important; }
   .main-container {
     width: 970px; } }
 
