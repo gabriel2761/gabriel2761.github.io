@@ -1,0 +1,28 @@
+
+.sandtimer-glass {
+	position: relative;
+	border: 2px solid black;
+	height: 500px;
+	width: 300px;
+}
+
+.sandtimer-sand {
+	position: absolute;
+	bottom: 0;
+	background-color: orange;
+	width: 100%;
+}
+
+.sandtimer-text {
+	line-height: 440px;
+	position: relative;
+	z-index: 700;
+}
+
+.margin-top {
+	margin-top: 10px
+}
+
+.margin-bottom {
+	margin-bottom: 10px
+}
