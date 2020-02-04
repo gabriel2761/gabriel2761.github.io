@@ -1,0 +1,218 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<style>
+#next {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 95%;
+  margin: 10px;
+  background-color: purple;
+  color: white;
+}
+
+.bubble {
+  display: inline-block;
+  padding: 6px 16px;
+  font-size: 22px;
+  margin: 6px;
+  border-radius: 11px;
+}
+
+.bubble-blue {
+  background-color: #6270cc;
+  color: white;
+}
+
+.bubble-grey {
+  background-color: #e3e3e3;
+}
+</style>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script nomodule src="./node_modules/browser.min.js"></script>
+
+<html>
+  <body>
+    <div id="messages" style="padding-bottom: 280"></div>
+    <button class="btn" id="next">SEND ^</button>
+  </body>
+</html>
+
+
+<script>
+var index = 0;
+var messages = [];
+
+messages.push({
+  text: 'Hey, what are you doing today Gabriele?',
+  isSender: true,
+});
+
+messages.push({
+  text: 'Nothing really. You can come over if you want',
+  isSender: false,
+});
+
+messages.push({
+  text: 'Thanks',
+  isSender: true,
+});
+
+messages.push({
+  text: 'Two hours later',
+  isSender: true,
+  isSubtitle: true,
+});
+
+messages.push({
+  text: 'Oh my god',
+  isSender: true,
+});
+
+messages.push({
+  text: 'What?',
+  isSender: false,
+});
+
+messages.push({
+  text: 'My car stopped',
+  isSender: true,
+});
+
+messages.push({
+  text: 'Soo',
+  isSender: false,
+});
+
+messages.push({
+  text: "I CAN'T COME",
+  isSender: true,
+});
+
+messages.push({
+  text: "Oh",
+  isSender: false,
+});
+
+messages.push({
+  text: "Sorry low bat",
+  isSender: false,
+});
+
+messages.push({
+  text: "I have to push the car",
+  isSender: true,
+});
+
+messages.push({
+  text: 'Gabriele just left',
+  isSender: true,
+  isSubtitle: true,
+});
+
+messages.push({
+  text: "Oh",
+  isSender: true,
+});
+
+messages.push({
+  text: "Please turn the phone back on",
+  isSender: true,
+});
+
+messages.push({
+  text: "There's somebody walking to my car",
+  isSender: true,
+});
+
+messages.push({
+  text: "Omg Omg",
+  isSender: true,
+});
+
+messages.push({
+  text: "I just woke up and I'm drowning",
+  isSender: true,
+});
+
+messages.push({
+  text: "I'm back",
+  isSender: false,
+});
+
+
+messages.push({
+  text: "No you're kidding right?",
+  isSender: false,
+});
+
+
+messages.push({
+  text: "NO",
+  isSender: true,
+});
+
+messages.push({
+  text: "You okay?",
+  isSender: false,
+});
+
+messages.push({
+  text: "Lucky I can swim",
+  isSender: true,
+});
+
+messages.push({
+  text: "ha",
+  isSender: true,
+});
+
+messages.push({
+  text: "I'm on the sand and where am I?",
+  isSender: true,
+});
+
+messages.push({
+  text: "Sorry gotta go sleep now",
+  isSender: false,
+});
+
+messages.push({
+  text: "Gabriele just left",
+  isSubtitle: true,
+});
+
+messages.push({
+  text: "Where am I?",
+  isSender: true,
+});
+
+
+
+$('#next').click(() => {
+  // while (index < messages.length) {
+  const message = messages[index];
+  const $bubble = $(`<span class="bubble">${message.text}</span>`);
+
+  if (!message.isSubtitle) {
+    $bubble.addClass(message.isSender ? 'bubble-grey' : 'bubble-blue');
+  } else {
+    $bubble.css({'margin': '4px auto', color: 'grey'});
+  }
+
+  const $element = $('<div class="d-flex"></div>').append($bubble);
+  $element.addClass(message.isSender ? 'justify-content-start' : 'justify-content-end');
+
+  $('#messages').append($element);
+
+  $('body').animate({ scrollTop: $(document).height() }, 1000);
+
+  index++;
+  // }
+});
+</script>

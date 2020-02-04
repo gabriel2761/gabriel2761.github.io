@@ -1,169 +1,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-<style>
-#next {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 95%;
-  margin: 10px;
-  background-color: purple;
-  color: white;
-}
-
-.bubble {
-  display: inline-block;
-  padding: 6px 16px;
-  font-size: 22px;
-  margin: 6px;
-  border-radius: 11px;
-}
-
-.bubble-blue {
-  background-color: #6270cc;
-  color: white;
-}
-
-.bubble-grey {
-  background-color: #e3e3e3;
-}
-</style>
-
 <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
 <script nomodule src="./node_modules/browser.min.js"></script>
 
+<style>
+body {
+}
+
+.card {
+  padding: 30px;
+  margin: 6px;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+</style>
+
 <html>
   <body>
-    <div id="messages" style="padding-bottom: 100px"></div>
-    <button class="btn" id="next">SEND ^</button>
+    <a href="./story1.html"><div class="card">Story 1</div></a>
+    <a href="./story2.html"><div class="card">Story 2</div></a>
   </body>
 </html>
 
-
-<script>
-var index = 0;
-var messages = [];
-
-messages.push({
-  text: 'Hey can you come to the party at Sunday',
-  isSender: true,
-});
-
-messages.push({
-  text: 'Nah, I\'m busy I\'ll try to do the job quickly',
-  isSender: false,
-});
-
-messages.push({
-  text: 'What kind of job do you have?',
-  isSender: true,
-});
-
-messages.push({
-  text: 'Just...',
-  isSender: false,
-});
-
-messages.push({
-  text: 'Babysit',
-  isSender: false,
-});
-
-messages.push({
-  text: 'Anyways okay',
-  isSender: true,
-});
-
-messages.push({
-  text: '2 days later',
-  isSender: true,
-  isSubtitle: true,
-});
-
-messages.push({
-  text: 'AAAAAAAAAAAA',
-  isSender: false,
-});
-
-messages.push({
-  text: 'What?',
-  isSender: true,
-});
-
-messages.push({
-  text: 'Today is the day I babysit. I\'m at their house and no ones there',
-  isSender: false,
-});
-
-messages.push({
-  text: "They said they'd be home",
-  isSender: false,
-});
-
-messages.push({
-  text: "I'm calling them right now",
-  isSender: false,
-});
-
-messages.push({
-  text: "Sorry I gotta go",
-  isSender: true,
-});
-
-messages.push({
-  text: "Phoebe just left",
-  isSender: true,
-  isSubtitle: true,
-});
-
-messages.push({
-  text: "AAAAAAAAA",
-  isSender: false,
-});
-
-messages.push({
-  text: "Hello ",
-  isSender: false,
-});
-
-messages.push({
-  text: "Stay",
-  isSender: false,
-});
-
-messages.push({
-  text: "I'M TRAPPED IN THE DUNGEON",
-  isSender: false,
-});
-
-messages.push({
-  text: "AAAAAAAAA",
-  isSender: false,
-});
-
-$('#next').click(() => {
- // while (index < messages.length) {
-  const message = messages[index];
-  const $bubble = $(`<span class="bubble">${message.text}</span>`);
-
-  if (!message.isSubtitle) {
-    $bubble.addClass(message.isSender ? 'bubble-grey' : 'bubble-blue');
-  } else {
-    $bubble.css({'margin': '4px auto', color: 'grey'});
-  }
-
-  const $element = $('<div class="d-flex"></div>').append($bubble);
-  $element.addClass(message.isSender ? 'justify-content-start' : 'justify-content-end');
-
-  $('#messages').append($element);
-
-  $('body').animate({ scrollTop: $(document).height() }, 1000);
-
-  index++;
- // }
-});
-</script>
