@@ -1,0 +1,86 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="./style.css">
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script nomodule src="./node_modules/browser.min.js"></script>
+
+<html>
+  <body>
+    <div id="messages" style="padding-bottom: 100px"></div>
+    <button class="btn" id="next">SEND ^</button>
+  </body>
+</html>
+
+
+<script>
+var index = 0;
+var messages = [];
+
+messages.push({ text: 'Hey Alexis' });
+messages.push({ text: "Yep", isGrey: true });
+messages.push({ text: "Just come to my room" });
+messages.push({ text: "No It's 3am and I'm lazy", isGrey: true });
+messages.push({ text: "How about we listen to music", isGrey: false });
+messages.push({ text: "You like music right?", isGrey: false });
+messages.push({ text: "Duh", isGrey: true });
+messages.push({ text: "Fine fine, only that", isGrey: true });
+messages.push({ text: "Okay" });
+messages.push({ text: '3 Minutes Later', isSubtitle: true });
+messages.push({ text: "Sis the music is getting weird", isGrey: true, });
+messages.push({ text: "Really? It's happening to me too", });
+messages.push({ text: "The lyrics are saying open your door so I can come in you and your sister"});
+messages.push({ text: "What?", isGrey: true });
+messages.push({ text: "I see somebody stalking us" });
+messages.push({ text: "And he's an old man" });
+messages.push({ text: "Pizza came!" });
+messages.push({ text: "That must be mums pizza that she ordered" });
+messages.push({ text: "Cause she said that she would order pizza for us" });
+messages.push({ text: "A man just said 'hello'" });
+messages.push({ text: "Ooohhhhh", isGrey: true });
+messages.push({ text: "He looks nice"});
+messages.push({ text: "Wait he looks like the person who was stalking us"});
+messages.push({ text: "AAAAAAAAAA"});
+messages.push({ text: "I was the man who was stalking your sister"});
+messages.push({ text: '3 Hours Later', isSubtitle: true });
+messages.push({ text: "Something happened to your sis", isGrey: true });
+messages.push({ text: "Sis how was your sleep?"});
+messages.push({ text: "And why am I sleeping on the floor"});
+messages.push({ text: "Sis you're alive something happened to you", isGrey: true });
+messages.push({ text: "I dream't of a stalker" });
+messages.push({ text: "And something happened to me" });
+messages.push({ text: "Really?", isGrey: true });
+messages.push({ text: "It was actually true", isGrey: true });
+messages.push({ text: "I read something online", isGrey: true });
+messages.push({ text: "And it said 3am is not the right hour and we did that on 3am", isGrey: true });
+messages.push({ text: "And now it's 6", isGrey: true });
+messages.push({ text: "I think it's just because of the 3am", isGrey: true });
+messages.push({ text: '20 minutes later', isSubtitle: true });
+messages.push({ text: "Sis your phone called"});
+messages.push({ text: "It's a voice mail"});
+messages.push({ text: "What?", isGrey: true });
+messages.push({ text: "I'm coming for you next", isGrey: true });
+
+$('#next').click(() => {
+  const message = messages[index];
+  const $bubble = $(`<span class="bubble">${message.text}</span>`);
+
+  if (!message.isSubtitle) {
+    $bubble.addClass(message.isGrey ? 'bubble-grey' : 'bubble-blue');
+  } else {
+    $bubble.css({'margin': '4px auto', color: 'grey'});
+  }
+
+  const $element = $('<div class="d-flex"></div>').append($bubble);
+  $element.addClass(message.isGrey ? 'justify-content-start' : 'justify-content-end');
+
+  $('#messages').append($element);
+
+  $('body').animate({ scrollTop: $(document).height() }, 1000);
+
+  index++;
+});
+</script>
