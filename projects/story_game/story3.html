@@ -1,0 +1,269 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="./style.css">
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script nomodule src="./node_modules/browser.min.js"></script>
+
+<html>
+  <body>
+    <div id="messages" style="padding-bottom: 100px"></div>
+    <button class="btn" id="next">SEND ^</button>
+  </body>
+</html>
+
+
+<script>
+var index = 0;
+var messages = [];
+
+messages.push({
+  text: 'Where is my dog?',
+  isSender: true,
+});
+
+messages.push({
+  text: 'I thought I saw him under your bed',
+  isSender: false,
+});
+
+messages.push({
+  text: "I already checked underneath my bed",
+  isSender: true,
+});
+
+messages.push({
+  text: "I saw him walking outside in the rain",
+  isSender: false,
+});
+
+messages.push({
+  text: "Who was he walking with?",
+  isSender: true,
+});
+
+messages.push({
+  text: "Your sister?",
+  isSender: false,
+});
+
+messages.push({
+  text: "I don't have a sister",
+  isSender: true,
+});
+
+messages.push({
+  text: "Your mum?",
+  isSender: false,
+});
+
+messages.push({
+  text: "Nah she's sleeping",
+  isSender: true,
+});
+
+messages.push({
+  text: "I'm following them",
+  isSender: false,
+});
+
+messages.push({
+  text: "Where are they going",
+  isSender: true,
+});
+
+messages.push({
+  text: "I think...",
+  isSender: false,
+});
+
+messages.push({
+  text: "They are going to your street",
+  isSender: false,
+});
+
+messages.push({
+  text: "5 minutes later",
+  isSubtitle: true,
+});
+
+messages.push({
+  text: "Their in front of your house",
+  isSender: false,
+});
+
+messages.push({
+  text: "What? Who is the girl?",
+  isSender: true,
+});
+
+messages.push({
+  text: "Okay, I just heard the doorbell ring",
+  isSender: true,
+});
+
+messages.push({
+  text: "OMG!",
+  isSender: true,
+});
+
+messages.push({
+  text: "What happened?",
+  isSender: false,
+});
+
+messages.push({
+  text: "...",
+  isSender: true,
+});
+
+messages.push({
+  text: "He's bleeding",
+  isSender: true,
+});
+
+messages.push({
+  text: "She killed my dog...",
+  isSender: true,
+});
+
+messages.push({
+  text: "AHHH!!!!!",
+  isSender: true,
+});
+
+messages.push({
+  text: "omg",
+  isSender: false,
+});
+
+messages.push({
+  text: "What did she look like?",
+  issender: true,
+});
+
+messages.push({
+  text: "I swear I will find her, and call the cops",
+  issender: true,
+});
+
+messages.push({
+  text: "She was wearing a white sweater",
+  issender: false,
+});
+
+messages.push({
+  text: "Black hair",
+  issender: false,
+});
+
+messages.push({
+  text: "I will find her and make her pay for this",
+  issender: true,
+});
+
+messages.push({
+  text: "Will you?",
+  issender: false,
+});
+
+messages.push({
+  text: "Yes of course",
+  issender: true,
+});
+
+messages.push({
+  text: "Do you even know how upset I am?",
+  issender: true,
+});
+
+messages.push({
+  text: "I know",
+  issender: false,
+});
+
+messages.push({
+  text: "Because I can see you",
+  issender: false,
+});
+
+messages.push({
+  text: "Crying",
+  issender: false,
+});
+
+messages.push({
+  text: "What, why are you just watching me?",
+  issender: true,
+});
+
+messages.push({
+  text: "Because it's fun",
+  issender: false,
+});
+
+messages.push({
+  text: ":)",
+  issender: false,
+});
+
+messages.push({
+  text: "What are you talking about Beal????",
+  issender: true,
+});
+
+messages.push({
+  text: "It better watch out",
+  issender: false,
+});
+
+messages.push({
+  text: "You might be next",
+  issender: false,
+});
+
+messages.push({
+  text: "WHo are you?",
+  issender: true,
+});
+
+messages.push({
+  text: "Let's just say, you'll see me on the news",
+  issender: false,
+});
+
+messages.push({
+  text: "I escaped jail",
+  issender: false,
+});
+
+messages.push({
+  text: "It was fun killing your dog",
+  issender: false,
+});
+
+
+
+$('#next').click(() => {
+  const message = messages[index];
+  const $bubble = $(`<span class="bubble">${message.text}</span>`);
+
+  if (!message.isSubtitle) {
+    $bubble.addClass(message.isSender ? 'bubble-grey' : 'bubble-blue');
+  } else {
+    $bubble.css({'margin': '4px auto', color: 'grey'});
+  }
+
+  const $element = $('<div class="d-flex"></div>').append($bubble);
+  $element.addClass(message.isSender ? 'justify-content-start' : 'justify-content-end');
+
+  $('#messages').append($element);
+
+  $('body').animate({ scrollTop: $(document).height() }, 1000);
+
+  index++;
+});
+</script>
