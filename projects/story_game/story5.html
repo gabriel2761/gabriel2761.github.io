@@ -1,0 +1,63 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="./style.css">
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script nomodule src="./node_modules/browser.min.js"></script>
+
+<html>
+  <body>
+    <div id="messages" style="padding-bottom: 100px"></div>
+    <button class="btn" id="next">SEND ^</button>
+  </body>
+</html>
+
+
+<script>
+var index = 0;
+var messages = [];
+
+messages.push({ text: 'Hey Ani, do you have an attic?' });
+messages.push({ text: "Yeah why", isGrey: true });
+messages.push({ text: 'I have a few boxes I want to store somewhere' });
+messages.push({ text: 'Oh ok but theres spiders tho', isGrey: true });
+messages.push({ text: 'What kind of spiders?' });
+messages.push({ text: 'White tails,red backs and more and some i dont know what names they are', isGrey: true });
+messages.push({ text: 'Can you get rid of them? I’m scared of spiders' });
+messages.push({ text: 'Sorry no ones home and im in   Cambrra', isGrey: true });
+messages.push({ text: 'But I saw you walk out of your house 5 minutes ago' });
+messages.push({ text: 'Well not in  cambrra  driving', isGrey: true });
+messages.push({ text: 'But she went back into your house. I see her taking a shower.' });
+messages.push({ text: 'Haha you KNOW who i am now your  friend is actually in cambrra and i got her phone', isGrey: true });
+messages.push({ text: 'Give her back her phone!' });
+messages.push({ text: 'Why do you think i wold do THAT hahaha you might see me on tv but not anymore', isGrey: true });
+messages.push({ text: 'Why would I see you on TV? Are you singing on a talent show?'});
+messages.push({ text: 'WHAT YOU HAVE TO BE JOKING oh here comes the show i am on HAHAHAHAHAHAHAH', isGrey: true });
+messages.push({ text: 'What channel is it on. Boy?'});
+messages.push({ text: 'DO YOU WANT TO BE NEXT', isGrey: true});
+messages.push({ text: 'AAHHHHH, I’m calling the po p' });
+messages.push({ text: 'TO BE CONTINUED', isSubtitle: true });
+
+$('#next').click(() => {
+  const message = messages[index];
+  const $bubble = $(`<span class="bubble">${message.text}</span>`);
+
+  if (!message.isSubtitle) {
+    $bubble.addClass(message.isGrey ? 'bubble-grey' : 'bubble-blue');
+  } else {
+    $bubble.css({'margin': '4px auto', color: 'grey'});
+  }
+
+  const $element = $('<div class="d-flex"></div>').append($bubble);
+  $element.addClass(message.isGrey ? 'justify-content-start' : 'justify-content-end');
+
+  $('#messages').append($element);
+
+  $('body').animate({ scrollTop: $(document).height() }, 1000);
+
+  index++;
+});
+</script>
