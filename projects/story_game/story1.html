@@ -22,99 +22,99 @@ var messages = [];
 
 messages.push({
   text: 'Hey can you come to the party at Sunday',
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: 'Nah, I\'m busy I\'ll try to do the job quickly',
-  isSender: false,
+  isGrey: false,
 });
 
 messages.push({
   text: 'What kind of job do you have?',
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: 'Just...',
-  isSender: false,
+  isGrey: false,
 });
 
 messages.push({
   text: 'Babysit',
-  isSender: false,
+  isGrey: false,
 });
 
 messages.push({
   text: 'Anyways okay',
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: '2 days later',
-  isSender: true,
+  isGrey: true,
   isSubtitle: true,
 });
 
 messages.push({
   text: 'AAAAAAAAAAAA',
-  isSender: false,
+  isGrey: false,
 });
 
 messages.push({
   text: 'What?',
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: 'Today is the day I babysit. I\'m at their house and no ones there',
-  isSender: false,
+  isGrey: false,
 });
 
 messages.push({
   text: "They said they'd be home",
-  isSender: false,
+  isGrey: false,
 });
 
 messages.push({
   text: "I'm calling them right now",
-  isSender: false,
+  isGrey: false,
 });
 
 messages.push({
   text: "Sorry I gotta go",
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: "Phoebe just left",
-  isSender: true,
+  isGrey: true,
   isSubtitle: true,
 });
 
 messages.push({
   text: "AAAAAAAAA",
-  isSender: false,
+  isGrey: false,
 });
 
 messages.push({
   text: "Hello ",
-  isSender: false,
+  isGrey: false,
 });
 
 messages.push({
   text: "Stay",
-  isSender: false,
+  isGrey: false,
 });
 
 messages.push({
   text: "I'M TRAPPED IN THE DUNGEON",
-  isSender: false,
+  isGrey: false,
 });
 
 messages.push({
   text: "AAAAAAAAA",
-  isSender: false,
+  isGrey: false,
 });
 
 $('#next').click(() => {
@@ -123,13 +123,13 @@ $('#next').click(() => {
   const $bubble = $(`<span class="bubble">${message.text}</span>`);
 
   if (!message.isSubtitle) {
-    $bubble.addClass(message.isSender ? 'bubble-grey' : 'bubble-blue');
+    $bubble.addClass(message.isGrey ? 'bubble-grey' : 'bubble-blue');
   } else {
     $bubble.css({'margin': '4px auto', color: 'grey'});
   }
 
   const $element = $('<div class="d-flex"></div>').append($bubble);
-  $element.addClass(message.isSender ? 'justify-content-start' : 'justify-content-end');
+  $element.addClass(message.isGrey ? 'justify-content-start' : 'justify-content-end');
 
   $('#messages').append($element);
 

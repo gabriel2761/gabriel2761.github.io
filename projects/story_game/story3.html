@@ -22,67 +22,67 @@ var messages = [];
 
 messages.push({
   text: 'Where is my dog?',
-  isSender: false,
+  isGrey: false,
 });
 
 messages.push({
   text: 'I thought I saw him under your bed',
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: "I already checked underneath my bed",
-  isSender: false,
+  isGrey: false,
 });
 
 messages.push({
   text: "I saw him walking outside in the rain",
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: "Who was he walking with?",
-  isSender: false,
+  isGrey: false,
 });
 
 messages.push({
   text: "Your sister?",
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: "I don't have a sister",
-  isSender: false,
+  isGrey: false,
 });
 
 messages.push({
   text: "Your mum?",
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: "Nah she's sleeping",
-  isSender: false,
+  isGrey: false,
 });
 
 messages.push({
   text: "I'm following them",
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: "Where are they going",
-  isSender: false,
+  isGrey: false,
 });
 
 messages.push({
   text: "I think...",
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: "They are going to your street",
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
@@ -92,107 +92,107 @@ messages.push({
 
 messages.push({
   text: "Their in front of your house",
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: "What? Who is the girl?",
-  isSender: false,
+  isGrey: false,
 });
 
 messages.push({
   text: "Okay, I just heard the doorbell ring",
-  isSender: false,
+  isGrey: false,
 });
 
 messages.push({
   text: "OMG!",
-  isSender: false,
+  isGrey: false,
 });
 
 messages.push({
   text: "What happened?",
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: "...",
-  isSender: false,
+  isGrey: false,
 });
 
 messages.push({
   text: "He's bleeding",
-  isSender: false,
+  isGrey: false,
 });
 
 messages.push({
   text: "She killed my dog...",
-  isSender: false,
+  isGrey: false,
 });
 
 messages.push({
   text: "AHHH!!!!!",
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: "omg",
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: "What did she look like?",
-  isSender: false,
+  isGrey: false,
 });
 
 messages.push({
   text: "I swear I will find her, and call the cops",
-  isSender: false,
+  isGrey: false,
 });
 
 messages.push({
   text: "She was wearing a white sweater",
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: "Black hair",
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: "I will find her and make her pay for this",
-  isSender: false,
+  isGrey: false,
 });
 
 messages.push({
   text: "Will you?",
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: "Yes of course",
-  isSender: false,
+  isGrey: false,
 });
 
 messages.push({
   text: "Do you even know how upset I am?",
-  isSender: false,
+  isGrey: false,
 });
 
 messages.push({
   text: "I know",
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: "Because I can see you",
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: "Crying",
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
@@ -201,12 +201,12 @@ messages.push({
 
 messages.push({
   text: "Because it's fun",
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: ":)",
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
@@ -215,32 +215,32 @@ messages.push({
 
 messages.push({
   text: "Better watch out",
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: "You might be next",
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: "WHo are you?",
-  isSender: false,
+  isGrey: false,
 });
 
 messages.push({
   text: "Let's just say, you'll see me on the news",
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: "I escaped jail",
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: "It was fun killing your dog",
-  isSender: true,
+  isGrey: true,
 });
 
 
@@ -250,13 +250,13 @@ $('#next').click(() => {
   const $bubble = $(`<span class="bubble">${message.text}</span>`);
 
   if (!message.isSubtitle) {
-    $bubble.addClass(message.isSender ? 'bubble-grey' : 'bubble-blue');
+    $bubble.addClass(message.isGrey ? 'bubble-grey' : 'bubble-blue');
   } else {
     $bubble.css({'margin': '4px auto', color: 'grey'});
   }
 
   const $element = $('<div class="d-flex"></div>').append($bubble);
-  $element.addClass(message.isSender ? 'justify-content-start' : 'justify-content-end');
+  $element.addClass(message.isGrey ? 'justify-content-start' : 'justify-content-end');
 
   $('#messages').append($element);
 

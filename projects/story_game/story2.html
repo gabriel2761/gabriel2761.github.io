@@ -22,136 +22,136 @@ var messages = [];
 
 messages.push({
   text: 'Hey, what are you doing today Gabriele?',
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: 'Nothing really. You can come over if you want',
-  isSender: false,
+  isGrey: false,
 });
 
 messages.push({
   text: 'Thanks',
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: 'Two hours later',
-  isSender: true,
+  isGrey: true,
   isSubtitle: true,
 });
 
 messages.push({
   text: 'Oh my god',
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: 'What?',
-  isSender: false,
+  isGrey: false,
 });
 
 messages.push({
   text: 'My car stopped',
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: 'Soo',
-  isSender: false,
+  isGrey: false,
 });
 
 messages.push({
   text: "I CAN'T COME",
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: "Oh",
-  isSender: false,
+  isGrey: false,
 });
 
 messages.push({
   text: "Sorry low bat",
-  isSender: false,
+  isGrey: false,
 });
 
 messages.push({
   text: "I have to push the car",
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: 'Gabriele just left',
-  isSender: true,
+  isGrey: true,
   isSubtitle: true,
 });
 
 messages.push({
   text: "Oh",
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: "Please turn the phone back on",
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: "There's somebody walking to my car",
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: "Omg Omg",
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: "I just woke up and I'm drowning",
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: "I'm back",
-  isSender: false,
+  isGrey: false,
 });
 
 
 messages.push({
   text: "No you're kidding right?",
-  isSender: false,
+  isGrey: false,
 });
 
 
 messages.push({
   text: "NO",
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: "You okay?",
-  isSender: false,
+  isGrey: false,
 });
 
 messages.push({
   text: "Lucky I can swim",
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: "ha",
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: "I'm on the sand and where am I?",
-  isSender: true,
+  isGrey: true,
 });
 
 messages.push({
   text: "Sorry gotta go sleep now",
-  isSender: false,
+  isGrey: false,
 });
 
 messages.push({
@@ -161,7 +161,7 @@ messages.push({
 
 messages.push({
   text: "Where am I?",
-  isSender: true,
+  isGrey: true,
 });
 
 
@@ -172,13 +172,13 @@ $('#next').click(() => {
   const $bubble = $(`<span class="bubble">${message.text}</span>`);
 
   if (!message.isSubtitle) {
-    $bubble.addClass(message.isSender ? 'bubble-grey' : 'bubble-blue');
+    $bubble.addClass(message.isGrey ? 'bubble-grey' : 'bubble-blue');
   } else {
     $bubble.css({'margin': '4px auto', color: 'grey'});
   }
 
   const $element = $('<div class="d-flex"></div>').append($bubble);
-  $element.addClass(message.isSender ? 'justify-content-start' : 'justify-content-end');
+  $element.addClass(message.isGrey ? 'justify-content-start' : 'justify-content-end');
 
   $('#messages').append($element);
 
