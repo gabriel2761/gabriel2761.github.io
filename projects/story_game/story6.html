@@ -1,0 +1,66 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="./style.css">
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script nomodule src="./node_modules/browser.min.js"></script>
+
+<html>
+  <body>
+    <div id="messages" style="padding-bottom: 100px"></div>
+    <button class="btn" id="next">SEND ^</button>
+  </body>
+</html>
+
+
+<script>
+var index = 0;
+var messages = [];
+
+messages.push({ text: 'no no i dont want to be next ' });
+messages.push({ text: "Then listen to me, I'm going to give you instructions", isGrey: true });
+messages.push({ text: "what is it" });
+messages.push({ text: "Grab a knife in your kitchen", isGrey: true });
+messages.push({ text: "why would i do THAT" });
+messages.push({ text: "are you crazy" });
+messages.push({ text: "Yes I am hahahhahaha. Do it", isGrey: true });
+messages.push({ text: "okay?" });
+messages.push({ text: "Now go to your neighbours house", isGrey: true });
+messages.push({ text: "ok im walking right now to there house" });
+messages.push({ text: "What do you see in their window", isGrey: true });
+messages.push({ text: "i see her baking" });
+messages.push({ text: "Try to get inside the house", isGrey: true });
+messages.push({ text: "im knocking" });
+messages.push({ text: "Hide the knife behind your back and get inside the house", isGrey: true });
+messages.push({ text: "okay i guess ,there window is open but it leads to a door thats locked" });
+messages.push({ text: "I want you to talk to her inside the house", isGrey: true });
+messages.push({ text: "ohno know i see what your tyriying to do " });
+messages.push({ text: "It's either you or her. Pick one", isGrey: true });
+messages.push({ text: "none,im calling the police " });
+messages.push({ text: "I guess you picked yourself", isGrey: true });
+messages.push({ text: "the police said they will be here in a minute im blocking you" });
+messages.push({ text: 'Stranger has been blocked', isSubtitle: true });
+
+$('#next').click(() => {
+  const message = messages[index];
+  const $bubble = $(`<span class="bubble">${message.text}</span>`);
+
+  if (!message.isSubtitle) {
+    $bubble.addClass(message.isGrey ? 'bubble-grey' : 'bubble-blue');
+  } else {
+    $bubble.css({'margin': '4px auto', color: 'grey'});
+  }
+
+  const $element = $('<div class="d-flex"></div>').append($bubble);
+  $element.addClass(message.isGrey ? 'justify-content-start' : 'justify-content-end');
+
+  $('#messages').append($element);
+
+  $('body').animate({ scrollTop: $(document).height() }, 1000);
+
+  index++;
+});
+</script>
