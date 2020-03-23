@@ -1,0 +1,78 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="./style.css">
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script nomodule src="./node_modules/browser.min.js"></script>
+
+<html>
+  <body>
+    <div id="messages" style="padding-bottom: 100px"></div>
+    <button class="btn" id="next">SEND ^</button>
+  </body>
+</html>
+
+
+<script>
+var index = 0;
+var messages = [];
+
+messages.push({text: 'hey what you up too'});
+
+messages.push({text: 'stuff', isGrey: true});
+
+messages.push({text: 'ohhhh are you free on monday?'});
+
+messages.push({text: 'yeah why', isGrey: true});
+
+messages.push({text: 'we haven seen each  other till you found a new boyfriend and also at Natillys house'});
+
+messages.push({text: 'oh sorry so were you wanna meet Alice', isGrey: true});
+
+messages.push({text: 'coffeey shop'});
+
+messages.push({text: 'okay', isGrey: true});
+
+messages.push({text: 'the next day', isSubtitle: true});
+
+messages.push({text: 'hey im driving to your house right now', isGrey: true});
+
+messages.push({text: 'but im at your house right now'});
+
+messages.push({text: 'wait thats not Amber'});
+
+messages.push({text: 'well im NOT Amber im sombody from jail', isGrey: true});
+
+messages.push({text: 'and i know were your house is hahhahahhaha', isGrey: true});
+
+messages.push({text: 'i can stalk you hahhahahhaha', isGrey: true});
+
+messages.push({text: 'im breaking my phone aaaaaaaaaaaaaaaaaaa'});
+
+messages.push({text: 'Alice just left', isSubtitle: true});
+
+$('#next').click(() => {
+  const message = messages[index];
+  const $bubble = $(`<span class="bubble">${message.text}</span>`);
+
+  if (!message.isSubtitle) {
+    $bubble.addClass(message.isGrey ? 'bubble-grey' : 'bubble-blue');
+  } else {
+    $bubble.css({'margin': '4px auto', color: 'grey'});
+  }
+
+  const $element = $('<div class="d-flex"></div>').append($bubble);
+  $element.addClass(message.isGrey ? 'justify-content-start' : 'justify-content-end');
+
+  $('#messages').append($element);
+
+  $('body').animate({ scrollTop: $(document).height() }, 1000);
+
+  index++;
+});
+</script>
+
+
