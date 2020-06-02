@@ -1,0 +1,73 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="./style.css">
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script nomodule src="./node_modules/browser.min.js"></script>
+
+<html>
+  <body>
+    <div id="messages" style="padding-bottom: 100px"></div>
+    <button class="btn" id="next">SEND ^</button>
+  </body>
+</html>
+
+
+<script>
+var index = 0;
+var messages = [];
+
+messages.push({ text: "hey who are you?. ", isGrey: true });
+messages.push({ text: "My name is bobby." });
+messages.push({ text: "can i tell my mum that your talking to me my name is alexis im a kid. ", isGrey: true });
+messages.push({ text: "I don't know, you look suspicious." });
+messages.push({ text: "im telling my mum now. ", isGrey: true });
+messages.push({ text: "wait. I'm not gay." });
+messages.push({ text: "okay i dont know how to spell much im in kindy. ", isGrey: true });
+messages.push({ text: "Then why are you spelling stuff right now?" });
+messages.push({ text: "i   dont know i can oly spell not much words my last name is roseu. ", isGrey: true });
+messages.push({ text: "Look, I need to know the password." });
+messages.push({ text: "what passssssword   mine is waterjuce456. ", isGrey: true });
+messages.push({ text: "Okay, I need to know where the safe in your house is." });
+messages.push({ text: "but i dont know the password ill ask my mum. ", isGrey: true });
+messages.push({ text: "Okay, I need my treasure. Tell me the password when you get it." });
+messages.push({ text: "oky my password is #%%&^&^687979. ", isGrey: true });
+messages.push({ text: "I will break into your house tonight. If you see a man without a face. Do not get scared." });
+messages.push({ text: "huh i dont know that word. ", isGrey: true });
+messages.push({ text: "Don't worry, I'm not gay." });
+messages.push({ text: "i live in camblestreethouse my number is 678 so thats were you can find me okay!! please come i dont have any frieds im homeschooled. ", isGrey: true });
+messages.push({ text: "Okay. I will come and get my treasure. But I don't want any friends." });
+messages.push({ text: "awwwww please but i dont have anything in my safe im poor i s[end all my money in the place i live i only have 1 dollar. ", isGrey: true });
+messages.push({ text: "If you play me a song on the piano then I will not take anything. I'm not racist either." });
+messages.push({ text: "but i dont know paino im poor i dont have anything for you too you word robs. ", isGrey: true });
+messages.push({ text: "Okay. I will not come then. I hate you." });
+messages.push({ text: "im caling dede powees. ", isGrey: true });
+messages.push({ text: "Why do you sound like that horrible purple guy?" });
+messages.push({ text: "im a kwd. ", isGrey: true });
+messages.push({ text: "Okay. Boy." });
+
+$('#next').click(() => {
+  const message = messages[index];
+  const $bubble = $(`<span class="bubble">${message.text}</span>`);
+
+  if (!message.isSubtitle) {
+    $bubble.addClass(message.isGrey ? 'bubble-grey' : 'bubble-blue');
+  } else {
+    $bubble.css({'margin': '4px auto', color: 'grey'});
+  }
+
+  const $element = $('<div class="d-flex"></div>').append($bubble);
+  $element.addClass(message.isGrey ? 'justify-content-start' : 'justify-content-end');
+
+  $('#messages').append($element);
+
+  $('body').animate({ scrollTop: $(document).height() }, 1000);
+
+  index++;
+});
+</script>
+
+
