@@ -1,0 +1,72 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="./style.css">
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script nomodule src="./node_modules/browser.min.js"></script>
+
+<html>
+  <body>
+    <div id="messages" style="padding-bottom: 100px"></div>
+    <button class="btn" id="next">SEND ^</button>
+  </body>
+</html>
+
+
+<script>
+var index = 0;
+var messages = [];
+
+
+messages.push({ text: "Hey can you come to my apartment at 3:55 in the morning. I found something on tiktok i wanna try.", isGrey: true });
+messages.push({ text: "3:55 in the morning?" });
+messages.push({ text: "NO WAY IN HELL!" });
+messages.push({ text: "Please, after ill make brownies", isGrey: true });
+messages.push({ text: "I want 2 brownies" });
+messages.push({ text: "And I get frosting on the sides" });
+messages.push({ text: "Coming right up", isGrey: true });
+messages.push({ text: "Okay It’s 3 am and I’m outside your apartment habooshi" });
+messages.push({ text: "Did you bring your grandpa with you? I see him in the camera", isGrey: true });
+messages.push({ text: "I didn’t bring lolo richie with me. Why?" });
+messages.push({ text: "Because theres an old man beside you. Lol thats freaking me out go home. Dont worry about the tiktok anymore", isGrey: true });
+messages.push({ text: "Let me IN PLEASE HABOOSHI" });
+messages.push({ text: "NO GO AWAY HIS RIGHT THERE", isGrey: true });
+messages.push({ text: "AAAAAAAAAAAA" });
+messages.push({ text: "I HOPE YOU HABOOSHI TO HELL!" });
+messages.push({ text: "Hey Nicy guess what. Ive spent ALL night researching about that old man their beside you and it said “not to go visit somebody at 3am or a dead long old family member will huant you and sit beside when you sleep. Not so bad right well its gonna get worse. That person who was beside you was an evil family member and once you let it inside your body it will slowly kill you bit by bit”", isGrey: true });
+messages.push({ text: "What?!" });
+messages.push({ text: "LOLO richie was evil?" });
+messages.push({ text: "No but an evil copy of him and sorry i cant be your friend anymore", isGrey: true });
+messages.push({ text: "Please habooshi please be my friend" });
+messages.push({ text: "Im sorry no i cant i want to but your evil lolo richi kill me t-", isGrey: true });
+messages.push({ text: "Nicy dear dont be afraid", isGrey: true });
+messages.push({ text: "Who is this, habooshi?" });
+messages.push({ text: "Theres no more habooshi only LOLO RICHI", isGrey: true });
+messages.push({ text: "AAAAAAAAAAAAAAAAAAA" });
+
+
+$('#next').click(() => {
+  const message = messages[index];
+  const $bubble = $(`<span class="bubble">${message.text}</span>`);
+
+  if (!message.isSubtitle) {
+    $bubble.addClass(message.isGrey ? 'bubble-grey' : 'bubble-blue');
+  } else {
+    $bubble.css({'margin': '4px auto', color: 'grey'});
+  }
+
+  const $element = $('<div class="d-flex"></div>').append($bubble);
+  $element.addClass(message.isGrey ? 'justify-content-start' : 'justify-content-end');
+
+  $('#messages').append($element);
+
+  $('body').animate({ scrollTop: $(document).height() }, 1000);
+
+  index++;
+});
+</script>
+
+
