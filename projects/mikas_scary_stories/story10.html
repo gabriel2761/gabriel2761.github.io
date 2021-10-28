@@ -1,0 +1,71 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="./style.css">
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script nomodule src="./node_modules/browser.min.js"></script>
+
+<html>
+  <body>
+    <div id="messages" style="padding-bottom: 100px"></div>
+    <button class="btn" id="next">SEND ^</button>
+  </body>
+</html>
+
+
+<script>
+var index = 0;
+var messages = [];
+
+
+messages.push({ text: "Hi santa for christmas all i want is a furball chomper please santa a beg you", isGrey: true });
+messages.push({ text: "Have you been a good boy or a bad boy?" });
+messages.push({ text: "I've been doing all my homework, doing my chores and i didnt get anything for my 10th birthday", isGrey: true });
+messages.push({ text: "Why didn’t you get anything?" });
+messages.push({ text: "Because my parents spent all  their money bailing me out of jail", isGrey: true });
+messages.push({ text: "You were in Jail? That’s not a good boy" });
+messages.push({ text: "What did you do to go to jail?" });
+messages.push({ text: "I murdered 49 hundred people and i caught my school on fire", isGrey: true });
+messages.push({ text: "What? No way, I’m blocking you." });
+messages.push({ text: "You are frightening me and misses Clause" });
+messages.push({ text: "Ooh that you for your house keys i got them from the mail i'll bring my gun with me santa", isGrey: true });
+messages.push({ text: "What are you going to do? Shoot me? Shoot me and my raindeers? Are you going to shoot my family?" });
+messages.push({ text: "I already did and by the way santa im actually the same age as you b.r.o.t.h.e.r", isGrey: true });
+messages.push({ text: "Why would you do that" });
+messages.push({ text: "Because all year mum and dad have been suffering without you and crying and ive been at jail. I couldent help them all this time. So i thought if i killed your family you would come back home", isGrey: true });
+messages.push({ text: "AAAAAAAAAAAAAA" });
+messages.push({ text: "Please don’t kill me" });
+messages.push({ text: "I’m bloody Santa Clause" });
+messages.push({ text: "Why would i brother", isGrey: true });
+messages.push({ text: "Henry? Henry Clause?" });
+messages.push({ text: "Thats right thomas clause", isGrey: true });
+messages.push({ text: "But you ARE family" });
+messages.push({ text: "But come hom-", isGrey: true });
+
+
+
+$('#next').click(() => {
+  const message = messages[index];
+  const $bubble = $(`<span class="bubble">${message.text}</span>`);
+
+  if (!message.isSubtitle) {
+    $bubble.addClass(message.isGrey ? 'bubble-grey' : 'bubble-blue');
+  } else {
+    $bubble.css({'margin': '4px auto', color: 'grey'});
+  }
+
+  const $element = $('<div class="d-flex"></div>').append($bubble);
+  $element.addClass(message.isGrey ? 'justify-content-start' : 'justify-content-end');
+
+  $('#messages').append($element);
+
+  $('body').animate({ scrollTop: $(document).height() }, 1000);
+
+  index++;
+});
+</script>
+
+
