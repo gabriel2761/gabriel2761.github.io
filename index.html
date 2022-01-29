@@ -5,9 +5,129 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Gabriel Mojica</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <style>
-html,body{margin:0;padding:0;background-color:#e9eaea;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:#727272}html h2,body h2{margin:0}html .section-container,body .section-container{margin:0 auto;padding:18px;max-width:1170px}html .grid-container,body .grid-container{display:flex;flex-wrap:wrap}html .section-title,body .section-title{margin-bottom:12px;font-size:32px;font-weight:200;color:#913abd}.intro{background-color:#913abd;padding:18px}.intro .intro-name{margin:0;font-weight:200;font-size:36px;color:#eee}.hero-section{background-color:#fefefe}.hero-section .hero-title{margin:0}.hero-section .hero-img{margin:16px 0;width:100%}.hero-section .hero-description .hero-description-line{font-size:16px;margin:12px 0}.hero-section .pagespeed-insight-link{color:#607d8b;text-decoration:none}.projects-section .project{width:100%;margin:9px 0;background-color:#fff;text-decoration:none;color:#727272}.projects-section .project:hover{box-shadow:0 4px 18px #888}.projects-section .project .project-img{width:100%}.projects-section .project .project-title,.projects-section .project .project-description{margin:16px 12px}.skills-section{background-color:#fff}.skills-section .skillset{width:48%;max-width:230px;margin:0 auto}.skills-section .skills-content{text-align:center}.skills-section .skill-img{border-radius:50%;width:100%;margin-top:32px}.skills-section .skillset-title{letter-spacing:1.5px;font-weight:400px;font-size:22px;margin-bottom:12px}.skills-section .skill-title{font-weight:200}.education-section .school{display:flex;justify-content:space-between;padding:12px;background-color:#fff;margin:12px 0}.education-section .school .school-logo{align-self:flex-start}.education-section .school .school-info{width:80%}.education-section .school .school-info .school-title{margin:4px 0 12px}.education-section .school .school-info .school-link{color:#607d8b;text-decoration:none}.education-section .school .school-info .school-link:hover{text-decoration:underline}.education-section .school .school-info .school-date{margin-top:12px;margin-bottom:0;color:#aaa}.contact-section{background-color:#727272}.contact-section .contact-title{color:#eee}.contact-section .contact{margin:8px 0;color:#fff;display:block}@media (min-width:525px){body .section-container{padding:46px 28px}body .section-title{margin-bottom:26px}.intro{padding:60px 36px}.intro .intro-name{font-size:56px}.hero-section{background-color:#fefefe}.hero-section .hero-title{font-size:22px;margin:0}.hero-section .hero-img{margin:16px 0;width:100%}.hero-section .hero-description .hero-description-line{font-size:22px;margin:12px 0}.skills-section .skills-content{display:flex;flex-wrap:wrap;justify-content:space-between}.skills-section .skillset{margin:0;width:38%}.education-section .school .school-info{padding:12px}.education-section .school .school-info .school-title{font-size:22px}}@media (min-width:768px){.grid-container .md-col-4{width:32%;margin-right:2%}.grid-container .md-col-4:nth-child(3n){margin-right:0}.skills-section .skills-content{display:flex;flex-wrap:wrap;justify-content:space-between}.skills-section .skillset{width:28%;text-align:center}.education-section .school{padding:22px}.education-section .school .school-info .school-title{font-size:28px}.education-section .school .school-info .school-link{display:block;margin-bottom:20px}}@media (min-width:525px) and (max-width:767px){.grid-container{justify-content:space-between}.grid-container .sm-col-6{width:48%}}
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #e9eaea;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #727272;
+  }
+
+  h1 {
+  }
+
+  html h2, body h2 {
+    margin: 0
+  }
+
+  html .section-container, body .section-container{
+    margin: 0 auto;
+    padding: 18px;
+    max-width: 1170px
+  }
+
+  html .grid-container, body html .section-title,body .section-title {
+    margin-bottom: 12px;
+    font-weight: 200;
+    color: #913abd;
+  }
+
+  .transparent-box {
+    text-align: center;
+    display: inline-block;
+    background-color: rgba(0,0,0, 0.4);
+    padding: 12px 24px;
+    border-radius: 16px;
+  }
+
+  .grid-container {
+    display: grid;
+    gap: 2%;
+    grid-template-columns: repeat(auto-fit, minmax(175px, auto));
+  }
+
+  .intro {
+    padding: 18px;
+    background-color: rgba(68,0,112,.4);
+
+    background-image: 
+      repeating-linear-gradient(
+        45deg, 
+        transparent, 
+        transparent 35px, 
+        rgba(95,54,154,.7) 35px, 
+        rgba(95,54,154,.7) 70px,
+        rgba(26,57,107,.7) 40px, 
+        rgba(26,57,107,.7) 80px
+      ),
+      repeating-linear-gradient(
+        -45deg, 
+        transparent, 
+        transparent 35px, 
+        rgba(95,54,154,.8) 35px, 
+        rgba(95,54,154,.8) 70px,
+        rgba(255,204,59,.4) 36px, 
+        rgba(255,204,59,.4) 76px,
+        rgba(26,57,107,.8) 40px, 
+        rgba(26,57,107,.8) 85px
+      );
+  }
+
+  .intro .intro-name {
+    margin:0;
+    font-weight: 200;
+    font-size: 36px;
+    color: #fff;
+  }
+
+  .hero-section{
+    background-color:#fefefe;
+  }
+
+  .hero-title {
+    margin: 0;
+    color: white;
+    padding: 4px 0;
+  }
+
+  .hero-section .hero-description .hero-description-line{font-size:16px;margin:12px 0}
+  .hero-section .pagespeed-insight-link{color:#607d8b;text-decoration:none}
+
+  .projects-section .project {
+    background-color:#fff;
+    text-decoration:none;
+    color:#727272;
+  }
+
+  .projects-section .project:hover{box-shadow:0 4px 18px #888}
+  .projects-section .project .project-img{width:100%}
+  .projects-section .project .project-title,.projects-section .project .project-description{margin:16px 12px}
+
+  .skills-section{background-color:#fff}.skills-section .skillset{width:48%;max-width:230px;margin:0 auto}.skills-section .skills-content{text-align:center}.skills-section .skill-img{border-radius:50%;width:100%;margin-top:32px}.skills-section .skillset-title{letter-spacing:1.5px;font-weight:400px;font-size:22px;margin-bottom:12px}.skills-section .skill-title{font-weight:200}.education-section .school{display:flex;justify-content:space-between;padding:12px;background-color:#fff;margin:12px 0}.education-section .school .school-logo{align-self:flex-start}.education-section .school .school-info{width:80%}.education-section .school .school-info .school-title{margin:4px 0 12px}.education-section .school .school-info .school-link{color:#607d8b;text-decoration:none}.education-section .school .school-info .school-link:hover{text-decoration:underline}.education-section .school .school-info .school-date{margin-top:12px;margin-bottom:0;color:#aaa}.contact-section{background-color:#727272}.contact-section .contact-title{color:#eee}.contact-section .contact{margin:8px 0;color:#fff;display:block}
+
+
+  @media (min-width:525px) {
+    p {
+      font-size: 18px;
+    }
+
+    body .section-container{padding:46px 28px}
+    body .section-title{margin-bottom:26px}
+    .intro{padding:60px 36px}
+    .intro .intro-name{font-size:56px}
+    .hero-section{background-color:#fefefe}
+
+    .hero-title {
+      margin: 0;
+      font-size: 22px;
+      padding: 8px 0;
+     }
+
+    .hero-section .hero-img{margin:16px 0;width:100%}
+    .hero-section .hero-description .hero-description-line{font-size:22px;margin:12px 0}
+  }
+
 </style>
 
 </head>
@@ -15,12 +135,14 @@ html,body{margin:0;padding:0;background-color:#e9eaea;font-family:"Helvetica Neu
 <main>
 
     <section class="intro">
+      <div class="transparent-box">
         <h1 class="intro-name">Gabriel Mojica</h1>
+        <h4 class="hero-title">Web and Mobile Developer</h4>
+      </div>
     </section>
 
     <section class="hero-section">
         <div class="section-container">
-            <h4 class="hero-title">Web and Mobile Developer</h4>
             <img class="hero-img" src="img/hero.svg" alt="Hero Image">
             <div class="hero-description">
                 <p class="hero-description-line">I'm a software developer based in Sydney, Australia</p>
@@ -38,48 +160,19 @@ html,body{margin:0;padding:0;background-color:#e9eaea;font-family:"Helvetica Neu
                 <p class="project-description">Barbell App for Strength Training, designed for serious lifters who want to add more weight to the bar</p>
             </a>
 
-            <a href="projects/typing-app/index.html" target="_blank" class="project sm-col-6 md-col-4">
+            <a href="projects/typing-app/index.html" target="_blank" class="project">
                 <h4 class="project-title">Practice Typing App</h4>
                 <img class="project-img" src="img/keyboard.svg" alt="placeholder image">
                 <p class="project-description">Practice touch typing using Google's 10,000 commonly used words</p>
             </a>
-        </div>
-    </section>
 
-    <section class="skills-section">
-        <div class="section-container">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-content">
-                <section class="skillset">
-                    <img class="skill-img" src="img/book.svg" alt="placeholder image">
-                    <h4 class="skillset-title">Frameworks/<br>Libraries</h4>
-                    <p class="skill-title">Flutter</p>
-                    <p class="skill-title">ReactJS</p>
-                    <p class="skill-title">NodeJS</p>
-                    <p class="skill-title">jQuery</p>
-                    <p class="skill-title">TensorFlow</p>
-                </section>
-
-                <section class="skillset">
-                    <img class="skill-img" src="img/languages.svg" alt="placeholder image">
-                    <h4 class="skillset-title">Languages</h4>
-                    <p class="skill-title">JavaScript/ES6</p>
-                    <p class="skill-title">Sass/Less</p>
-                    <p class="skill-title">Dart</p>
-                    <p class="skill-title">Java</p>
-                    <p class="skill-title">SQL</p>
-                    <p class="skill-title">PHP</p>
-                    <p class="skill-title">Bash</p>
-                </section>
-
-                <section class="skillset">
-                    <img class="skill-img" src="img/hammer.svg" alt="placeholder image">
-                    <h4 class="skillset-title">Tools</h4>
-                    <p class="skill-title">Unix</p>
-                    <p class="skill-title">Vim</p>
-                    <p class="skill-title">Adobe Photoshop</p>
-                </section>
-            </div>
+            <a href="projects/kiosk/index.html" target="_blank" class="project">
+                <h4 class="project-title">Designer Kiosk</h4>
+                <img class="project-img" src="img/kiosk1.jpg" alt="placeholder image">
+                <p class="project-description">
+                  Design and purchase your own surfboard on a touch screen device. 
+                </p>
+            </a>
         </div>
     </section>
 

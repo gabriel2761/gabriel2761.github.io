@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Kiosk</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #e9eaea;
+      background-color: black;
+      font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+      color: #727272;
+    }
+
+    video {
+      object-fit: cover;
+      height: 100vh;
+    }
+
+    .intro-name {
+      margin:0;
+      font-weight: 200;
+      font-size: 36px;
+      color: #fff;
+      padding: 36px
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .space-between {
+      justify-content: space-between;
+    }
+
+    .align-center {
+      align-items: center;
+    }
+
+    p {
+      font-size: 3vw;
+    }
+
+    .p-1 {
+      padding: 5%;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="intro">
+    <h1 class="intro-name">Design Kiosk</h1> 
+  </section>
+
+  <section class="flex space-between">
+    <div class="flex align-center p-1">
+      <p>
+        I created the software that runs on the kiosk that 
+        enables people to design their own surfboards.
+      </p>
+    </div>
+    <video width="40%" height="auto" loop muted autoplay>
+      <source src="../../video/fulldemo.webm" type="video/webm">
+      <source src="../../video/kiosk.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <section class="flex space-between">
+    <img width="67%" src="../../img/kiosk1.jpg"></img>
+    <div class="flex align-center p-1">
+      <p>
+        It featured in the Sydney Startup Showcase in Warringah mall.
+      </p>
+    </div>
+  </section>
+
+  <section class="flex space-between">
+    <div class="flex align-center p-1">
+      <p>
+        The yoga mat version was displayed at the <em>She Went Wild</em> conference
+      </p>
+    </div>
+    <img width="66%" src="../../img/kiosk2.jpg"></img>
+  </section>
+
+  <section class="flex space-between">
+    <div style="width: 40%;">
+      <video width="100%" loop muted autoplay>
+        <source src="../../video/swiper.webm" type="video/webm">
+        <source src="../../video/swiper.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="flex align-center p-1">
+      <p>
+        Users are able to customise and design any surfboard model
+      </p>
+    </div>
+  </section>
+
+  <section class="flex space-between">
+    <div class="flex align-center p-1">
+      <p>
+        And view it in 3D
+      </p>
+    </div>
+    <div style="width: 40%;">
+      <video width="100%" loop muted autoplay>
+        <source src="../../video/3d.webm" type="video/webm">
+        <source src="../../video/3d.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <section class="flex space-between">
+    <img width="70%" src="../../img/kiosk3.jpg"></img>
+    <div class="flex align-center p-1">
+      <p>
+        I worked alongside a designer to create the template. 
+        <br><br>
+        The functionality was done using ReactJS
+        <br><br>
+        3D was done using Three.js 
+      </p>
+    </div>
+  </section>
+</body>
+</html>
