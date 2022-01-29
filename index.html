@@ -33,6 +33,10 @@
     color: #913abd;
   }
 
+  .max-width {
+    max-width: 1170px;
+  }
+
   .transparent-box {
     text-align: center;
     display: inline-block;
@@ -48,7 +52,7 @@
   }
 
   .intro {
-    padding: 18px;
+    padding: 12px 0px;
     background-color: rgba(68,0,112,.4);
 
     background-image: 
@@ -104,7 +108,8 @@
   .projects-section .project .project-img{width:100%}
   .projects-section .project .project-title,.projects-section .project .project-description{margin:16px 12px}
 
-  .skills-section{background-color:#fff}.skills-section .skillset{width:48%;max-width:230px;margin:0 auto}.skills-section .skills-content{text-align:center}.skills-section .skill-img{border-radius:50%;width:100%;margin-top:32px}.skills-section .skillset-title{letter-spacing:1.5px;font-weight:400px;font-size:22px;margin-bottom:12px}.skills-section .skill-title{font-weight:200}.education-section .school{display:flex;justify-content:space-between;padding:12px;background-color:#fff;margin:12px 0}.education-section .school .school-logo{align-self:flex-start}.education-section .school .school-info{width:80%}.education-section .school .school-info .school-title{margin:4px 0 12px}.education-section .school .school-info .school-link{color:#607d8b;text-decoration:none}.education-section .school .school-info .school-link:hover{text-decoration:underline}.education-section .school .school-info .school-date{margin-top:12px;margin-bottom:0;color:#aaa}.contact-section{background-color:#727272}.contact-section .contact-title{color:#eee}.contact-section .contact{margin:8px 0;color:#fff;display:block}
+  .contact-section{background-color:#727272}
+  .contact-section .contact-title{color:#eee}.contact-section .contact{margin:8px 0;color:#fff;display:block}
 
 
   @media (min-width:768px) {
@@ -118,9 +123,11 @@
       font-size: 18px;
     }
 
-    body .section-container{padding:46px 28px}
+    body .section-container{
+      padding: 46px 28px;
+    }
+
     body .section-title{margin-bottom:26px}
-    .intro{padding:60px 36px}
     .intro .intro-name{font-size:56px}
     .hero-section{background-color:#fefefe}
 
@@ -141,10 +148,12 @@
 <main>
 
     <section class="intro">
-      <div class="transparent-box">
-        <h1 class="intro-name">Gabriel Mojica</h1>
-        <h4 class="hero-title">Web & App Developer</h4>
-      </div>
+      <div class="section-container">
+        <div class="transparent-box">
+          <h1 class="intro-name">Gabriel Mojica</h1>
+          <h4 class="hero-title">Web & App Developer</h4>
+        </div>
+      <div>
     </section>
 
     <section class="hero-section">
