@@ -44,7 +44,7 @@
   .grid-container {
     display: grid;
     gap: 2%;
-    grid-template-columns: repeat(auto-fit, minmax(175px, auto));
+    grid-template-columns: 1fr 1fr;
   }
 
   .intro {
@@ -107,7 +107,13 @@
   .skills-section{background-color:#fff}.skills-section .skillset{width:48%;max-width:230px;margin:0 auto}.skills-section .skills-content{text-align:center}.skills-section .skill-img{border-radius:50%;width:100%;margin-top:32px}.skills-section .skillset-title{letter-spacing:1.5px;font-weight:400px;font-size:22px;margin-bottom:12px}.skills-section .skill-title{font-weight:200}.education-section .school{display:flex;justify-content:space-between;padding:12px;background-color:#fff;margin:12px 0}.education-section .school .school-logo{align-self:flex-start}.education-section .school .school-info{width:80%}.education-section .school .school-info .school-title{margin:4px 0 12px}.education-section .school .school-info .school-link{color:#607d8b;text-decoration:none}.education-section .school .school-info .school-link:hover{text-decoration:underline}.education-section .school .school-info .school-date{margin-top:12px;margin-bottom:0;color:#aaa}.contact-section{background-color:#727272}.contact-section .contact-title{color:#eee}.contact-section .contact{margin:8px 0;color:#fff;display:block}
 
 
-  @media (min-width:525px) {
+  @media (min-width:768px) {
+    .grid-container {
+      display: grid;
+      gap: 2%;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
     p {
       font-size: 18px;
     }
@@ -161,17 +167,25 @@
             </a>
 
             <a href="projects/typing-app/index.html" target="_blank" class="project">
-                <h4 class="project-title">Practice Typing App</h4>
-                <img class="project-img" src="img/keyboard.svg" alt="placeholder image">
-                <p class="project-description">Practice touch typing using Google's 10,000 commonly used words</p>
+              <h4 class="project-title">Practice Typing App</h4>
+              <img class="project-img" src="img/keyboard.svg" alt="placeholder image">
+              <p class="project-description">Practice touch typing using Google's 10,000 commonly used words</p>
             </a>
 
             <a href="projects/kiosk/index.html" target="_blank" class="project">
-                <h4 class="project-title">Designer Kiosk</h4>
-                <img class="project-img" src="img/kiosk1.jpg" alt="placeholder image">
-                <p class="project-description">
-                  Design and purchase your own surfboard on a touch screen device. 
-                </p>
+              <h4 class="project-title">Designer Kiosk</h4>
+              <img class="project-img" src="img/kiosk1.jpg" alt="placeholder image">
+              <p class="project-description">
+                Design and purchase your own surfboard on a touch screen device. 
+              </p>
+            </a>
+
+            <a href="projects/sydney_guide/index.html" target="_blank" class="project">
+              <h4 class="project-title">Sydney Guide</h4>
+              <img class="project-img" src="img/sydney_guide.jpg" alt="placeholder image">
+              <p class="project-description">
+                Prototype and proposal to help visually impaired people navigate train stations in Sydney.
+              </p>
             </a>
         </div>
     </section>
