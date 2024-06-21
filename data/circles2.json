@@ -1,7 +1,10 @@
-
-[
-  {"id": "5", "color": "#edce42"},
-  {"id": "6", "color": "#00FFFF"},
-  {"id": "7", "color": "#000000"},
-  {"id": "8", "color": "salmon"}
-]
+{
+  "id": "2",
+  "name": "First",
+  "circles": [
+    { "id": "5", "color": "#edce42" },
+    { "id": "6", "color": "#00FFFF" },
+    { "id": "7", "color": "#000000" },
+    { "id": "8", "color": "salmon" }
+  ]
+}
