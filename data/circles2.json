@@ -1,6 +1,10 @@
 [
-  { "id": "5", "color": "#edce42" },
-  { "id": "6", "color": "#00FFFF" },
-  { "id": "7", "color": "#000000" },
-  { "id": "8", "color": "salmon" }
+  { "id": "10", "color": "#edce42" },
+  { "id": "13", "color": "#00FFFF" },
+  { "id": "14", "color": "#00FFFF" },
+  { "id": "15", "color": "#00FFFF" },
+  { "id": "16", "color": "#00FFFF" },
+  { "id": "19", "color": "salmon" },
+  { "id": "21", "color": "salmon" },
+  { "id": "22", "color": "salmon" }
 ]
