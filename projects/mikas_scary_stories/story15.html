@@ -1,0 +1,75 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="./style.css">
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script nomodule src="./node_modules/browser.min.js"></script>
+
+<html>
+  <body>
+    <div id="messages" style="padding-bottom: 100px"></div>
+    <button class="btn" id="next">SEND ^</button>
+  </body>
+</html>
+
+
+<script>
+var index = 0;
+var messages = [];
+
+
+messages.push({ text: "Hi Brad (: " });
+messages.push({ text: "We should for defs catch up! " });
+messages.push({ text: "It's hard to believe that the last time we saw eachother was 5 years ago! " });
+messages.push({ text: "Hopefully we could push past that incident.." });
+messages.push({ text: "Hi Bobby!", isGrey: true });
+messages.push({ text: "Okay catch up where?", isGrey: true });
+messages.push({ text: "What incident? I don't even remember brotha", isGrey: true });
+messages.push({ text: "Sweet bro! I still remember your address, i'll meet u there" });
+messages.push({ text: "but bro. Bro.. You didn't answer me question bro", isGrey: true });
+messages.push({ text: "Which one?" });
+messages.push({ text: "I only asked one question read ^^^ bro", isGrey: true });
+messages.push({ text: "Ohh um.." });
+messages.push({ text: "You know" });
+messages.push({ text: "When I went all mental on you.." });
+messages.push({ text: "I want to meet up with you so that I could apologise" });
+messages.push({ text: "BTW whose that guy on your instagram posts?" });
+messages.push({ text: "Youse look close :( " });
+
+messages.push({ text: "What do you mean browsa?", isGrey: true });
+messages.push({ text: "What do you mean you don't know who that is?", isGrey: true });
+messages.push({ text: "You know them", isGrey: true });
+messages.push({ text: "Is he the person that ruined our friendship " });
+messages.push({ text: "Didn't I specifically tell you not to hang out with him? He was weird.. " });
+messages.push({ text: "Brad. He put me in jail!  " });
+messages.push({ text: "Is he at your house now? I just saw on his instagram that he is at your house. " });
+messages.push({ text: "Is he hurting y y ou? I'm coming to ur house, i'm bringing a knife " });
+messages.push({ text: "I won't let him hurt you again. " });
+messages.push({ text: "Wait for me, I'm coming " });
+
+
+messages.push({ text: "Don't be friends with people who have skitzo", isSubtitle: true });
+
+$('#next').click(() => {
+  const message = messages[index];
+  const $bubble = $(`<span class="bubble">${message.text}</span>`);
+
+  if (!message.isSubtitle) {
+    $bubble.addClass(message.isGrey ? 'bubble-grey' : 'bubble-blue');
+  } else {
+    $bubble.css({'margin': '4px auto', color: 'grey'});
+  }
+
+  const $element = $('<div class="d-flex"></div>').append($bubble);
+  $element.addClass(message.isGrey ? 'justify-content-start' : 'justify-content-end');
+
+  $('#messages').append($element);
+
+  $('body').animate({ scrollTop: $(document).height() }, 1000);
+
+  index++;
+});
+</script>

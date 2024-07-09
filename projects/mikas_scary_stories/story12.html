@@ -1,0 +1,64 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="./style.css">
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script nomodule src="./node_modules/browser.min.js"></script>
+
+<html>
+  <body>
+    <div id="messages" style="padding-bottom: 100px"></div>
+    <button class="btn" id="next">SEND ^</button>
+  </body>
+</html>
+
+
+<script>
+var index = 0;
+var messages = [];
+
+
+messages.push({ text: "Mia! Wanna have a sleep over!" });
+messages.push({ text: "Sure thing Kayla. I'll ask my dad to drop me", isGrey: true });
+  messages.push({ text: "kay, cool Mia. Can you bring snacks because the girl in the mirror takes all of my food." });
+messages.push({ text: "Ummm. kay. ", isGrey: true });
+messages.push({ text: "Wait, wdym girl in the mirror?", isGrey: true });
+messages.push({ text: "Wait you didn't know!! She's been there ever since i was born." });
+messages.push({ text: "uhhhh is this a joke?", isGrey: true });
+messages.push({ text: "This better not be another tiktok thing", isGrey: true });
+messages.push({ text: "Don't be mean to her. NEVER be mean to her. Last time she killed the whole intire world, i mean dinosaurs. It wasn't an astroid, it was her! That's why 3 Gods had to put her in a mirror to stop her killing. But who knows if she's going to come out. Be carful of what you say, in other words, watch your mouth." });
+
+messages.push({ text: "I don't want to come over anymore.", isGrey: true });
+messages.push({ text: "I'm like kind of freaked out.", isGrey: true });
+
+  messages.push({ text: "Come over, i already told her. She might possess me agin on killing 3 men." });
+
+messages.push({ text: "Tell me this isn't a joke", isGrey: true });
+
+  messages.push({ text: "" });
+
+messages.push({ text: "test", isSubtitle: true });
+
+$('#next').click(() => {
+  const message = messages[index];
+  const $bubble = $(`<span class="bubble">${message.text}</span>`);
+
+  if (!message.isSubtitle) {
+    $bubble.addClass(message.isGrey ? 'bubble-grey' : 'bubble-blue');
+  } else {
+    $bubble.css({'margin': '4px auto', color: 'grey'});
+  }
+
+  const $element = $('<div class="d-flex"></div>').append($bubble);
+  $element.addClass(message.isGrey ? 'justify-content-start' : 'justify-content-end');
+
+  $('#messages').append($element);
+
+  $('body').animate({ scrollTop: $(document).height() }, 1000);
+
+  index++;
+});
+</script>

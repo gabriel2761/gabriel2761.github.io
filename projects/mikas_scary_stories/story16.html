@@ -1,0 +1,130 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="./style.css">
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script nomodule src="./node_modules/browser.min.js"></script>
+
+<html>
+  <body>
+    <div id="messages" style="padding-bottom: 100px"></div>
+    <button class="btn" id="next">SEND ^</button>
+  </body>
+</html>
+
+
+<script>
+var index = 0;
+var messages = [];
+
+
+messages.push({ text: "Hi Cassie" });
+messages.push({ text: "I know you don't talk and you won't probably reply but..." });
+messages.push({ text: "Hickory dickory dock!" });
+
+messages.push({ text: "Hi Uncle :)", isGrey: true });
+messages.push({ text: "How are you? ", isGrey: true });
+
+messages.push({ text: "Hehe hi 'cassie' how are you? Or should I say her mum or dad?" });
+
+messages.push({ text: "No Uncle, this is Cassie.", isGrey: true });
+messages.push({ text: "Uncle, I'm not really supposed to be talking to you or anyone really", isGrey: true });
+
+messages.push({ text: "Umm.. I know this isn't really Cassie. You don't talk. Who is this?" });
+messages.push({ text: "It truly is me!", isGrey: true });
+messages.push({ text: "I just don't talk because mummy doesn't let me...", isGrey: true });
+
+messages.push({ text: "I don't know what to say" });
+messages.push({ text: "Can you prove you are Cassie?" });
+
+messages.push({ text: "The happiest moment of my life was when you took me to Chatime and spent time with me", isGrey: true });
+messages.push({ text: "I don't really get to experience time outside", isGrey: true });
+messages.push({ text: "Mummy doesn't let me go outside so I'm stuck at home all day.", isGrey: true });
+
+messages.push({ text: "omg... you are cassie..." });
+messages.push({ text: "So is that why you don't talk? You can but just pretend not to?" });
+messages.push({ text: "And you can also read and type. It all makes sense..." });
+messages.push({ text: "What about your dad?" });
+
+messages.push({ text: "Daddy is scared of mummy. He is scared that she will threaten him again...", isGrey: true });
+messages.push({ text: "What does your mum do to you?" });
+messages.push({ text: "Mummy doesn't let me outside into the real world!", isGrey: true });
+messages.push({ text: "She always leaves me alone in the house", isGrey: true });
+messages.push({ text: "If I ever complain she hits me", isGrey: true });
+messages.push({ text: "I think thats the reason why I have autism", isGrey: true });
+messages.push({ text: "I'm so sorry Cassie" });
+messages.push({ text: "I didn't know you were going through this" });
+messages.push({ text: "What does her do to threaten your dad?" });
+messages.push({ text: "She says that he will never see me again", isGrey: true });
+messages.push({ text: "That's why he has been with her for many years now", isGrey: true });
+messages.push({ text: "Oh so that's why she's able to gain so much weight and not care" });
+messages.push({ text: "I feel bad for him" });
+messages.push({ text: "I'm so overwhelmed cassie." });
+messages.push({ text: "I didn't know you could talk" });
+messages.push({ text: "I knew you were clever but not this smart and aware" });
+messages.push({ text: "Does anyone else know you can talk?" });
+messages.push({ text: "Only mummy.", isGrey: true });
+messages.push({ text: "She doesn't let me talk though..", isGrey: true });
+messages.push({ text: "She said that if I tell anyone about what happpens at home she will hurt me", isGrey: true });
+messages.push({ text: "This is so sad" });
+messages.push({ text: "Lolo said he caught her squeezing your mouth when you were about to cry" });
+messages.push({ text: "It all makes sense now" });
+messages.push({ text: "What can I do to help?" });
+messages.push({ text: "make sure she disappears forever, uncle.", isGrey: true });
+messages.push({ text: "Do you want me to call the police on her?" });
+messages.push({ text: "Daddy's already tried that but she caught him.", isGrey: true });
+messages.push({ text: "Daddy had depression for months after that", isGrey: true });
+messages.push({ text: "Oh that explains the massive weight gain he has" });
+messages.push({ text: "omg this is all coming together" });
+messages.push({ text: "Okay, I will make her dissapear" });
+messages.push({ text: "Would you be able to tell us everything she did to you?" });
+messages.push({ text: "I would.", isGrey: true });
+messages.push({ text: "Okay, I've got a plan but it will take a few months minimum." });
+
+messages.push({ text: "Wednesay, 10 July, 2024", isSubtitle: true });
+messages.push({ text: "Hi Cassie, hope you been well. I'm here if you need to talk to someone." });
+messages.push({ text: "Thank you uncle. I appreciate your help (: )", isGrey: true });
+messages.push({ text: "Why is it that when I look into peoples eyes they can read my mind, uncle?", isGrey: true });
+messages.push({ text: "How come you can look into peoples eye when I can't? ", isGrey: true });
+messages.push({ text: "It makes me so sad that I can't give others eye contact :( ) ", isGrey: true });
+
+messages.push({ text: "What, why do you think people can read your mind?" });
+messages.push({ text: "Because mother told me so", isGrey: true });
+messages.push({ text: "Is that why you don't look at people in the eyes?" });
+messages.push({ text: "Yes, uncle.", isGrey: true });
+
+messages.push({ text: "What do the people at daycare say?" });
+messages.push({ text: "What people at daycare? Is daycare the dark room that mummy leaves me in?", isGrey: true });
+
+messages.push({ text: "No Cassie, none of this is true. " });
+messages.push({ text: "People can't read your mind, and daycare is... " });
+messages.push({ text: "not that... " });
+messages.push({ text: "I'm so sorry Cassie" });
+messages.push({ text: "We will get you out of there" });
+
+
+messages.push({ text: "", isSubtitle: true });
+
+$('#next').click(() => {
+  const message = messages[index];
+  const $bubble = $(`<span class="bubble">${message.text}</span>`);
+
+  if (!message.isSubtitle) {
+    $bubble.addClass(message.isGrey ? 'bubble-grey' : 'bubble-blue');
+  } else {
+    $bubble.css({'margin': '4px auto', color: 'grey'});
+  }
+
+  const $element = $('<div class="d-flex"></div>').append($bubble);
+  $element.addClass(message.isGrey ? 'justify-content-start' : 'justify-content-end');
+
+  $('#messages').append($element);
+
+  $('body').animate({ scrollTop: $(document).height() }, 1000);
+
+  index++;
+});
+</script>

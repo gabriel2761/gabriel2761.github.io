@@ -1,0 +1,79 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="./style.css">
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script nomodule src="./node_modules/browser.min.js"></script>
+
+<html>
+  <body>
+    <div id="messages" style="padding-bottom: 100px"></div>
+    <button class="btn" id="next">SEND ^</button>
+  </body>
+</html>
+
+
+<script>
+var index = 0;
+var messages = [];
+
+
+messages.push({ text: "Hey, can you be my friend? :)" });
+messages.push({ text: "Nah, tbh ur kinda sus", isGrey: true });
+messages.push({ text: "But you must play :)" });
+messages.push({ text: "Why bro?", isGrey: true });
+messages.push({ text: "You must see them yourself :)" });
+messages.push({ text: "See who?", isGrey: true });
+messages.push({ text: "The ones that can see what you see :)" });
+messages.push({ text: "R U ok or r u just skitso", isGrey: true });
+messages.push({ text: "You will finally MEET THEM :D" });
+messages.push({ text: "Should I call 000? u sound mental?", isGrey: true });
+messages.push({ text: "You are FREE! You can do what you LIKE!" });
+messages.push({ text: "They like to WATCH! )" });
+messages.push({ text: "Who likes to watch man ? ur kinda scaring me", isGrey: true });
+messages.push({ text: "THEY SEE WHAT YOU SEE :) :) :)" });
+messages.push({ text: "U should go to an asylum, ur cray cray.....", isGrey: true });
+messages.push({ text: "hehehehe" });
+messages.push({ text: "I can see" });
+messages.push({ text: "We can see through you're eyes" });
+messages.push({ text: "We can see your dreams" });
+messages.push({ text: "We see everything you do because we see WHAT YOU SEE :) :) :) :) :)" });
+messages.push({ text: "send me ur adress. I'll drive you to an asylum. I'm genuinely worried.", isGrey: true });
+messages.push({ text: "HAHAHHAHAA" });
+messages.push({ text: "AHAHAHAHAHAHHAAH" });
+messages.push({ text: "So you will meet them? :) :)" });
+messages.push({ text: "Sure but fr ur skitso", isGrey: true });
+messages.push({ text: "Okay HEHEHE" });
+messages.push({ text: "How many phones are you holding? :D" });
+messages.push({ text: "one duh.. ", isGrey: true });
+messages.push({ text: "HEHEHHEHEHEE" });
+messages.push({ text: "Check again" });
+messages.push({ text: "Didn't you notice you're messaging yourself?" });
+messages.push({ text: "I'm you :)" });
+messages.push({ text: "See :) :) :)", isGrey: true });
+messages.push({ text: "Facebook messenger has noticed strange activity on your account and will block access until further verification", isSubtitle: true });
+
+
+$('#next').click(() => {
+  const message = messages[index];
+  const $bubble = $(`<span class="bubble">${message.text}</span>`);
+
+  if (!message.isSubtitle) {
+    $bubble.addClass(message.isGrey ? 'bubble-grey' : 'bubble-blue');
+  } else {
+    $bubble.css({'margin': '4px auto', color: 'grey'});
+  }
+
+  const $element = $('<div class="d-flex"></div>').append($bubble);
+  $element.addClass(message.isGrey ? 'justify-content-start' : 'justify-content-end');
+
+  $('#messages').append($element);
+
+  $('body').animate({ scrollTop: $(document).height() }, 1000);
+
+  index++;
+});
+</script>

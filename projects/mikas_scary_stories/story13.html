@@ -1,0 +1,110 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="./style.css">
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script nomodule src="./node_modules/browser.min.js"></script>
+
+<html>
+  <body>
+    <div id="messages" style="padding-bottom: 100px"></div>
+    <button class="btn" id="next">SEND ^</button>
+  </body>
+</html>
+
+
+<script>
+var index = 0;
+var messages = [];
+
+
+messages.push({ text: "Hey! I'm Andrea, I've never talked to someone on Omegle. Hope you aren't an old man lol." });
+messages.push({ text: "No, I'm not an all man. I'm a small boy, and my name is Greg.", isGrey: true });
+messages.push({ text: "Nice to meet ya Greg! What is your exact age? I'm 10" });
+messages.push({ text: "I'm 52 ", isGrey: true });
+messages.push({ text: "Oh sorry, I mean 12", isGrey: true });
+messages.push({ text: "By any chance do you go to St Mary's? I go to that school. " });
+messages.push({ text: "Oh, yeah I think... ", isGrey: true });
+messages.push({ text: "Do you by chance know the Pokemons?", isGrey: true });
+messages.push({ text: "I hear they are totally hip thing today. No cap. For rizz yo. Dead ass dude.", isGrey: true });
+messages.push({ text: "Do you go to St Mary's or not?" });
+messages.push({ text: "Give me a specific answer Greggie poo" });
+messages.push({ text: "If you don't I'm going to hurt Mummy..." });
+messages.push({ text: "Why do you call me Greggie poo?", isGrey: true });
+messages.push({ text: "My Mummy? oh no!", isGrey: true });
+messages.push({ text: "Oh no, not that oh no, you're going to hurt Mummy", isGrey: true });
+messages.push({ text: "Oh no that I know you're Australian because you said Mummy, not Mommy", isGrey: true });
+messages.push({ text: "SHEESH!", isGrey: true });
+messages.push({ text: "You know what Greggie?" });
+messages.push({ text: "I've got a solution Greggie Poo!" });
+messages.push({ text: "Ask Mummy for your adress and I'll ask you all my questions!" });
+messages.push({ text: "Maybe we can also have a playdate and I can rizz up your dad (:" });
+messages.push({ text: "BTW I'm not from Australia, I'm from the Philippines. There we cook dogs." });
+messages.push({ text: "If you want I can cook your dog (;" });
+messages.push({ text: "Okay, I will give you my address", isGrey: true });
+messages.push({ text: "Can I trust you Andrea?", isGrey: true });
+messages.push({ text: "Why do you want to rizz up my father", isGrey: true });
+messages.push({ text: "Okay, I am from the Philippines too. I live in Pampanga.", isGrey: true });
+messages.push({ text: "My Addres is 55 St Mara Village", isGrey: true });
+messages.push({ text: "Yasss! Can you bring a dog. Slay Queen!", isGrey: true });
+messages.push({ text: "I will bring a dog Bestie boo!" });
+messages.push({ text: "wait hold up...." });
+messages.push({ text: "We have the same adress..." });
+messages.push({ text: "Gemboy is that you..." });
+messages.push({ text: "Yeah that's my address.", isGrey: true });
+messages.push({ text: "I know it's totes mid", isGrey: true });
+messages.push({ text: "Not gonna lie. This Sus.", isGrey: true });
+messages.push({ text: "But could be Radical. Lets rock on!", isGrey: true });
+messages.push({ text: "Kuya Gemboy.." });
+messages.push({ text: "You're 52 years old!" });
+messages.push({ text: "Why were you talking to me when I told you I was 10?" });
+messages.push({ text: "Last time you went to jail for that!" });
+messages.push({ text: "What, but you're not 10 either", isGrey: true });
+messages.push({ text: "Is that you? I just see an old white man outside my house", isGrey: true });
+messages.push({ text: "Mate, this is extremely awkward", isGrey: true });
+messages.push({ text: "Ah ye, that's me. " });
+messages.push({ text: "Also, how blind are you. I'm not white, I'm brown." });
+messages.push({ text: "If nanay finds out about how you were texting me you're dead, you know that!" });
+messages.push({ text: "Anyway, can you open the door for me? It's locked" });
+messages.push({ text: "Bro, why is Tatay sitting on his tomb? He's dead bruh." });
+messages.push({ text: "Aaah! Open the door quick. Tatay is running at me with a knife!" });
+messages.push({ text: "That's not my Tatay", isGrey: true });
+messages.push({ text: "I'm a random white guy mate", isGrey: true });
+messages.push({ text: "That is the village buster", isGrey: true });
+messages.push({ text: "He's name is retardo like ricardo but he's not spanish", isGrey: true });
+messages.push({ text: "Look at me texting while you're getting chased by him with a knife", isGrey: true });
+messages.push({ text: "He's angry because he was expecting a 10 year old", isGrey: true });
+messages.push({ text: "I wonder if you will even read this.", isGrey: true });
+messages.push({ text: "I'll let you reply while you're running or hiding", isGrey: true });
+messages.push({ text: "And text me instead of calling the police for some reason", isGrey: true });
+messages.push({ text: "You tarantado. You're such a gago causes you won't open the door for me" });
+messages.push({ text: "I hate you" });
+messages.push({ text: "I won't see you in heaven cause you'll be in hell!" });
+messages.push({ text: "Bye! I'll make sure the Village Buster slays you queen!" });
+messages.push({ text: "I'm not a tarantado. I may be a white man but I sure damn know what that means!", isGrey: true });
+messages.push({ text: "The conclusion of the story is internet stranges are all dodgey old white (trans) guys who live in the Philippines for some odd reason", isSubtitle: true });
+
+
+$('#next').click(() => {
+  const message = messages[index];
+  const $bubble = $(`<span class="bubble">${message.text}</span>`);
+
+  if (!message.isSubtitle) {
+    $bubble.addClass(message.isGrey ? 'bubble-grey' : 'bubble-blue');
+  } else {
+    $bubble.css({'margin': '4px auto', color: 'grey'});
+  }
+
+  const $element = $('<div class="d-flex"></div>').append($bubble);
+  $element.addClass(message.isGrey ? 'justify-content-start' : 'justify-content-end');
+
+  $('#messages').append($element);
+
+  $('body').animate({ scrollTop: $(document).height() }, 1000);
+
+  index++;
+});
+</script>

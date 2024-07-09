@@ -1,0 +1,69 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="./style.css">
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script nomodule src="./node_modules/browser.min.js"></script>
+
+<html>
+  <body>
+    <div id="messages" style="padding-bottom: 100px"></div>
+    <button class="btn" id="next">SEND ^</button>
+  </body>
+</html>
+
+
+<script>
+var index = 0;
+var messages = [];
+
+
+messages.push({ text: "Hey Anthony. I just got a new ball." });
+messages.push({ text: "Do you want to kick it at school tomz" });
+messages.push({ text: "Okay Alex, whatever makes you happy!", isGrey: true });
+messages.push({ text: "Okay Bro. " });
+messages.push({ text: "Hey, were you playing Roblox the other day?" });
+messages.push({ text: "No why, don't you remember i got banned. I told you about a million times already!", isGrey: true  });
+messages.push({ text: "What! but we were playing together the whole day yesterday!" });
+messages.push({ text: "There's no way that that wasn't you!" });
+messages.push({ text: "Are you pranking me again. For youtube?" });
+
+messages.push({ text: "Wdym boy, i haven't played roblox in like 2 years now. Who were you playing with?", isGrey: true   });
+
+messages.push({ text: "No way Manthony man bro? You gotta be messing with me dude man." });
+messages.push({ text: "If it wasn't you this is some real sh## #### " });
+messages.push({ text: "###### ####### ##############" });
+
+messages.push({ text: "Hey dude, stop swearing, ill do some googling if someone could hack my account. It is possibe. Wait. Man. I heard that some people hack peoples acounts and use them to chat with other people. uh oh. After they hack they find where other people live and k-k-kill them...." , isGrey: true  });
+
+messages.push({ text: "You have to be kidding me. I told him all my secrets! He knows something really bad about me!" });
+  
+messages.push({ text: "man, hold up. That isn't the worst thing. The worst thing is that he knows where you live and can kill you." , isGrey: true  });
+
+messages.push({ text: "I gotta go. Someone is knocking by door." });
+
+messages.push({ text: "Alex just left", isSubtitle: true });
+
+$('#next').click(() => {
+  const message = messages[index];
+  const $bubble = $(`<span class="bubble">${message.text}</span>`);
+
+  if (!message.isSubtitle) {
+    $bubble.addClass(message.isGrey ? 'bubble-grey' : 'bubble-blue');
+  } else {
+    $bubble.css({'margin': '4px auto', color: 'grey'});
+  }
+
+  const $element = $('<div class="d-flex"></div>').append($bubble);
+  $element.addClass(message.isGrey ? 'justify-content-start' : 'justify-content-end');
+
+  $('#messages').append($element);
+
+  $('body').animate({ scrollTop: $(document).height() }, 1000);
+
+  index++;
+});
+</script>
